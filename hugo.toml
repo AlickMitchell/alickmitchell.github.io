@@ -1,0 +1,4 @@
+baseURL = 'https://cablekitten.org/'
+languageCode = 'en-us'
+title = 'Cable Kitten'
+theme = 'ananke'
