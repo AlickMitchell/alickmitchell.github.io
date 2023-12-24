@@ -110,7 +110,11 @@ Create a study spreadsheet. I broke down the blueprint into a spreadsheet, and f
 
 Have a good note taking system. I find noting taking whilst following more concept based training keeps my mind from wandering. 
 
-I also find the process of working through my notes and editing them solidifies the concepts. But the biggest benefit I find to taking notes is having the config examples to hand when you need them. This becomes a tool not just for the exam but for your career. I only take physical notes these days when reading. I'll then type them up. I keep organized notes using org mode in Emacs.
+I also find the process of working through my notes and editing them solidifies the concepts. 
+
+But the biggest benefit I find to taking notes is having the config examples to hand when you need them. This becomes a tool not just for the exam but for your career. 
+
+I keep organized notes using org mode in Emacs. Emacs has modules that help you search and sort our notes.
 
 * Documentation
 
@@ -131,8 +135,8 @@ I find that I can end up covering material that I already know, just because it'
 
 ## My Take Away ##
 
-If you would have asked my opionion of the ENCOR whilst I was studying for it, you would have got some discouraging comments peppered with swearing. Now at the end of it, I do understand why it has the breadth that it is. I feel it has made me a more complete engineer. It was a worthwhile course, and I would recommend it.
+If you would have asked my opionion of the ENCOR whilst I was studying for it, you would have got some discouraging comments peppered with some blue language. Now at the end of it, I do understand why it has the breadth that it is. I feel it has made me a more complete engineer. It was a worthwhile course, and I would recommend it.
 
-
+![Cisco Certified Specialist - Enterprise Core](cisco-certified-specialist-enterprise-core.png)
 
 
