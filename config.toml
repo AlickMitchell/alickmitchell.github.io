@@ -2,7 +2,7 @@ title = "Cable Kitten"
 baseURL = "https://cablekitten.co.uk/"
 languageCode = "en-us"
 theme = 'ananke'
-resourceDir = "../resources"
+#resourceDir = "../resources"
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
