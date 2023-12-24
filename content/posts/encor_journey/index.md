@@ -114,11 +114,11 @@ I also find the process of working through my notes and editing them solidifies 
 
 But the biggest benefit I find to taking notes is having the config examples to hand when you need them. This becomes a tool not just for the exam but for your career. 
 
-I keep organized notes using org mode in Emacs. Emacs has modules that help you search and sort our notes.
+I keep organized notes using org mode in Emacs. Emacs has modules that help you search and sort your notes.
 
 * Documentation
 
-Cisco white papers and documentation are your friend. Learning to navigate the documentation is a skill all of it's own, but it pays in huge dividend once you nail it.
+Cisco white papers and documentation are your friend. Learning to navigate the documentation is a skill all of it's own, and it pays a huge dividend once you nail it.
 
 Obviously these are just things that I personally found helpful, everyone has a different study style.
 
