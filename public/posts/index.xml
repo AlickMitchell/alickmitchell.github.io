@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cable Kitten</title>
-    <link>https://cablekitten.co.uk/</link>
-    <description>Recent content on Cable Kitten</description>
+    <title>Posts on Cable Kitten</title>
+    <link>https://cablekitten.co.uk/posts/</link>
+    <description>Recent content in Posts on Cable Kitten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://cablekitten.co.uk/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://cablekitten.co.uk/about/</link>
-      <pubDate>Tue, 12 Dec 2023 12:57:32 +0000</pubDate>
-      <guid>https://cablekitten.co.uk/about/</guid>
-      <description>Alick is a Network Engineer based in the North of England The boring stuff:&#xA;CCNA R&amp;amp;S. Cisco Certified Specialist - Enterprise Core. Linux Foundation Certified System Administrator </description>
-    </item>
+    <atom:link href="https://cablekitten.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My ENCOR Journey</title>
       <link>https://cablekitten.co.uk/posts/encor_journey/</link>

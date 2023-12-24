@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Cable Kitten</title>
-    <link>https://cablekitten.org/tags/</link>
+    <link>https://cablekitten.co.uk/tags/</link>
     <description>Recent content in Tags on Cable Kitten</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <atom:link href="https://cablekitten.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://cablekitten.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

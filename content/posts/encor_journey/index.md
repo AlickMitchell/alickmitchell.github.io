@@ -1,6 +1,6 @@
 +++
 title = 'My ENCOR Journey'
-draft = true
+draft = false
 +++
 
 I passed my ENCOR just over a month ago. I took it on the last day of V1.0.

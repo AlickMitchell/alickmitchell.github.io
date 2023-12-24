@@ -2,10 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cablekitten.org/</loc>
+    <loc>https://cablekitten.co.uk/about/</loc>
+    <lastmod>2023-12-12T12:57:32+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.org/categories/</loc>
+    <loc>https://cablekitten.co.uk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.org/tags/</loc>
+    <loc>https://cablekitten.co.uk/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://cablekitten.co.uk/posts/encor_journey/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://cablekitten.co.uk/posts/lfcs_journey/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://cablekitten.co.uk/posts/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://cablekitten.co.uk/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

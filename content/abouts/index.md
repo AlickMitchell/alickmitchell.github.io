@@ -1,17 +1,15 @@
 +++
-title = 'Me'
+title = 'About'
 date = 2023-12-12T12:57:32Z
-draft = true
+draft = false
 +++
 
-Alick is a Network Engineer 
-based in the North of England
+Alick is a Network Engineer based in the UK.
 The boring stuff: 
-
-    CCNA R&S.
 
     Cisco Certified Specialist - Enterprise Core. 
 
 	Linux Foundation Certified System Administrator
 
+    CCNA R&S.
 
