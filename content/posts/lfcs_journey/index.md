@@ -1,7 +1,7 @@
 +++
 title = 'My LFCS Journey' 
 date  = 2023-12-13
-draft = true
+draft = false
 +++
 
 I passed my Linux Foundation Certified Systems Administrator Exam a few weeks back. This was a recertification. Since I last took the exam the syllabus has been overhauled. Where previously you would choose between CentOS and Ubuntu, they have now gone for a vendor neutral approach. 
