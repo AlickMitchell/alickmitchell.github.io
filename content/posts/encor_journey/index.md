@@ -1,5 +1,6 @@
 +++
 title = 'My ENCOR Journey'
+date  = 2023-11-03
 draft = false
 +++
 
@@ -78,7 +79,7 @@ This is a nice collection of videos that Jeff put together that covers parts of 
 
 [CCIEORDIE.COM](https://www.youtube.com/@Ccieordie_arteq/videos)
 
-## Practice Exam's ##
+### Practice Exam's ###
 
 * [Boson.com - ExSim-Max for Cisco 350-401 ENCOR](https://www.boson.com/practice-exam/350-401-ENCOR-cisco-ccnp-practice-exam)
 
@@ -92,7 +93,7 @@ This is a good learning tool. I found it more heavy on labs than the real exam, 
 
 These questions are not at the same level as the Exam, but are a good learning tool to mix in with your learning strategy.
 
-## Automation ##
+### Automation ###
 
 In all truthfulness, none of the Video series covered the Automation section very well.
 
@@ -100,7 +101,7 @@ Luckily, DevNet has a good course.
 
 * [Learn network programmability basics](https://developer.cisco.com/video/net-prog-basics/)
 
-## Labbing ##
+### Labbing ###
  
 * [GNS3](https://gns3.com/)
 
