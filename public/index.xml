@@ -13,7 +13,7 @@
       <link>https://cablekitten.co.uk/posts/linux_static_route/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://cablekitten.co.uk/posts/linux_static_route/</guid>
-      <description>Whilst recently recertifying for my LFCS the networking section had been developed and now included static routes. I thought this was fantastic. Though I know a lot of people use linux I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.&#xA;Static routes can come in handy for connecting environments with multiple networks.</description>
+      <description>Whilst recently recertifying for my LFCS the networking section had been further expanded and now included static routes. I thought this was fantastic. Though I know a lot of people use linux, I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.&#xA;Static routes can come in handy for connecting environments with multiple networks.</description>
     </item>
     <item>
       <title>My LFCS Journey</title>
