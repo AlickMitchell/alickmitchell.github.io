@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Linux Static Route | Cable Kitten</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Whilst recently recertifying for my LFCS the networking section had been developed and now included static routes. I thought this was fantastic. Though I know a lot of people use linux I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.
+Static routes can come in handy for connecting environments with multiple networks.">
+    <meta name="generator" content="Hugo 0.121.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://cablekitten.co.uk/posts/linux_static_route/">
+    
+
+    <meta property="og:title" content="Linux Static Route" />
+<meta property="og:description" content="Whilst recently recertifying for my LFCS the networking section had been developed and now included static routes. I thought this was fantastic. Though I know a lot of people use linux I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.
+Static routes can come in handy for connecting environments with multiple networks." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cablekitten.co.uk/posts/linux_static_route/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00" />
+
+<meta itemprop="name" content="Linux Static Route">
+<meta itemprop="description" content="Whilst recently recertifying for my LFCS the networking section had been developed and now included static routes. I thought this was fantastic. Though I know a lot of people use linux I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.
+Static routes can come in handy for connecting environments with multiple networks."><meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="770">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Linux Static Route"/>
+<meta name="twitter:description" content="Whilst recently recertifying for my LFCS the networking section had been developed and now included static routes. I thought this was fantastic. Though I know a lot of people use linux I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.
+Static routes can come in handy for connecting environments with multiple networks."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-navy">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Cable Kitten
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/AlickMitchell/" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://twitter.com/intent/tweet?url=https://cablekitten.co.uk/posts/linux_static_route/&amp;text=Linux%20Static%20Route" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Linux Static Route</h1>
+      
+      <p class="tracked">
+        By <strong>Alick</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-01-01T00:00:00Z">January 1, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Whilst recently recertifying for my LFCS the networking section had been developed and now included static routes. I thought this was fantastic. Though I know a lot of people use linux I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.</p>
+<p>Static routes can come in handy for connecting environments with multiple networks. By using static routes, we can direct our traffic, and make sure the more efficient paths are being used.</p>
+<h3 id="the-lab-environment">The Lab Environment</h3>
+<p><img src="lsr_topology.png" alt="Linux Static Route Topology"></p>
+<p>Current any traffic to the 10.10.1.4/30 network will go out of enp7s0, but all other traffic will use the default gateway at 10.10.1.1</p>
+<pre tabindex="0"><code>[user@localhost ~]$ ip route show
+default via 10.10.1.1 dev enp1s0 proto static metric 100 
+10.10.1.0/30 dev enp1s0 proto kernel scope link src 10.10.1.2 metric 100      
+10.10.1.4/30 dev enp7s0 proto kernel scope link src 10.10.1.5 metric 101      
+</code></pre><p>When we attempt to ping Site-2, our pings will be sent to the default gateway as the routing table doesn&rsquo;t have an entry for the network.
+The Wireshark output below show the ping being sent to GW, but GW also doesn&rsquo;t have a route for Site-2.</p>
+<p><img src="ping_14_1.png" alt="Ping Site-2-1"></p>
+<p>So to easily remedy this, we can implement a static route on Site-1.</p>
+<h3 id="methods">Methods</h3>
+<p>We have two ways of implementing the static route:</p>
+<ul>
+<li>Temporarily - Using &lsquo;ip&rsquo;</li>
+<li>Permanently - Using &lsquo;NetworkManager&rsquo;</li>
+</ul>
+<h3 id="implementing-with-ip">Implementing with ip</h3>
+<p>First we will show you how to do this with the ip tool.</p>
+<pre tabindex="0"><code>[user@localhost ~]$ sudo ip route add 10.10.1.12/30 via 10.10.1.6 dev enp7s0
+</code></pre><p>Viewing the routing table for Site-1 we now see that a route has been added for the 10.10.1.12 network.</p>
+<pre tabindex="0"><code>[user@localhost ~]$ ip route show
+default via 10.10.1.1 dev enp1s0 proto static metric 100 
+10.10.1.0/30 dev enp1s0 proto kernel scope link src 10.10.1.2 metric 100 
+10.10.1.4/30 dev enp7s0 proto kernel scope link src 10.10.1.5 metric 101 
+10.10.1.12/30 via 10.10.1.6 dev enp7s0 
+</code></pre><p>Now when we ping Site-2 we see a response.</p>
+<pre tabindex="0"><code>[user@localhost ~]$ ping 10.10.1.14
+PING 10.10.1.14 (10.10.1.14) 56(84) bytes of data.
+64 bytes from 10.10.1.14: icmp_seq=1 ttl=62 time=2.22 ms
+64 bytes from 10.10.1.14: icmp_seq=2 ttl=62 time=1.54 ms
+64 bytes from 10.10.1.14: icmp_seq=3 ttl=62 time=1.52 ms
+64 bytes from 10.10.1.14: icmp_seq=4 ttl=62 time=1.54 ms
+^C
+--- 10.10.1.14 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.518/1.705/2.219/0.296 ms
+</code></pre><p>As mentioned this is a temporary route, when the machine is rebooted the route will disappear. The advantage of this method is that you don&rsquo;t have to interfere with the connection to implement the route. It can be a fix between maintenance windows if you are worried about dropping the connection, or if testing before making permanent.</p>
+<h3 id="implementing-with-networkmanger">Implementing with NetworkManger</h3>
+<p>To make the route permanent, we need to edit the Network Managment Service, which for Red Hat like systems is NetworkManger.</p>
+<p>We have several options to do this:</p>
+<ul>
+<li>nmcli
+<ul>
+<li>The command line option</li>
+</ul>
+</li>
+<li>nmedit
+<ul>
+<li>This is a interactive session the command line</li>
+</ul>
+</li>
+<li>nmtui
+<ul>
+<li>This is an ncurses based appliction</li>
+</ul>
+</li>
+<li>Gui
+<ul>
+<li>There are gui packages available</li>
+</ul>
+</li>
+</ul>
+<p>We&rsquo;ll use the nmcli option to set the route.</p>
+<pre tabindex="0"><code>[user@localhost ~]$ sudo nmcli connection modify enp7s0 +ipv4.routes &#34;10.10.1.12/30 10.10.1.6&#34;
+</code></pre><p>If we look at the routes, we will see that the route hasn&rsquo;t been added yet</p>
+<pre tabindex="0"><code>[user@localhost ~]$ ip route show
+default via 10.10.1.1 dev enp1s0 proto static metric 100 
+10.10.1.0/30 dev enp1s0 proto kernel scope link src 10.10.1.2 metric 100 
+10.10.1.4/30 dev enp7s0 proto kernel scope link src 10.10.1.5 metric 101 
+</code></pre><p>We need to reactivate the connection for the route to take effect</p>
+<pre tabindex="0"><code>user@localhost ~]$ nmcli connection up enp7s0
+Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/22)
+[user@localhost ~]$ ip route show
+default via 10.10.1.1 dev enp1s0 proto static metric 100 
+10.10.1.0/30 dev enp1s0 proto kernel scope link src 10.10.1.2 metric 100 
+10.10.1.4/30 dev enp7s0 proto kernel scope link src 10.10.1.5 metric 101 
+10.10.1.12/30 via 10.10.1.6 dev enp7s0 proto static metric 101 
+</code></pre><p>We&rsquo;ll ping Site-2 for verification</p>
+<pre tabindex="0"><code>[user@localhost ~]$ ping 10.10.1.14
+PING 10.10.1.14 (10.10.1.14) 56(84) bytes of data.
+64 bytes from 10.10.1.14: icmp_seq=1 ttl=62 time=2.74 ms
+64 bytes from 10.10.1.14: icmp_seq=2 ttl=62 time=1.58 ms
+64 bytes from 10.10.1.14: icmp_seq=3 ttl=62 time=1.74 ms
+64 bytes from 10.10.1.14: icmp_seq=4 ttl=62 time=1.71 ms
+^C
+--- 10.10.1.14 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.576/1.939/2.738/0.465 ms
+</code></pre><p>As you can see implementing static routes in Linux is reletively painless. This was a simple example. You can get extremely detailed with the route attributes, such as setting TOS values, mtu size, window size and many more. A good resource for this is <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html-single/configuring_and_managing_networking/index#configuring-static-routes_configuring-and-managing-networking">Configuring static routes</a> from the Red Hat documentation.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-navy bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://cablekitten.co.uk/" >
+    &copy;  Cable Kitten 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/AlickMitchell/" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

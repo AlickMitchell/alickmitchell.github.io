@@ -4,7 +4,7 @@ date  = 2024-01-01
 draft = false
 +++
 
-Whilst recently recertifying for my LFCS the networking section had been developed and now included static routes. I thought this was fantastic. Though I know a lot of people use linux I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route. 
+Whilst recently recertifying for my LFCS the networking section had been further expanded and now included static routes. I thought this was fantastic. Though I know a lot of people use linux, I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route. 
 
 Static routes can come in handy for connecting environments with multiple networks. By using static routes, we can direct our traffic, and make sure the more efficient paths are being used.
 
@@ -13,7 +13,7 @@ Static routes can come in handy for connecting environments with multiple networ
 
 ![Linux Static Route Topology](lsr_topology.png)
 
-Current any traffic to the 10.10.1.4/30 network will go out of enp7s0, but all other traffic will use the default gateway at 10.10.1.1
+Currently any traffic to the 10.10.1.4/30 network will go out of enp7s0, but all other traffic will use the default gateway at 10.10.1.1
 ```
 [user@localhost ~]$ ip route show
 default via 10.10.1.1 dev enp1s0 proto static metric 100 
@@ -22,7 +22,7 @@ default via 10.10.1.1 dev enp1s0 proto static metric 100
 ```
 
 When we attempt to ping Site-2, our pings will be sent to the default gateway as the routing table doesn't have an entry for the network.
-The Wireshark output below show the ping being sent to GW, but GW also doesn't have a route for Site-2. 
+The Wireshark output below, shows the ping being sent to GW, but GW also doesn't have a route for Site-2. 
 
 ![Ping Site-2-1](ping_14_1.png)
 
@@ -118,4 +118,6 @@ PING 10.10.1.14 (10.10.1.14) 56(84) bytes of data.
 rtt min/avg/max/mdev = 1.576/1.939/2.738/0.465 ms
 ```
 
-As you can see implementing static routes in Linux is reletively painless. This was a simple example. You can get extremely detailed with the route attributes, such as setting TOS values, mtu size, window size and many more. A good resource for this is [Configuring static routes](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html-single/configuring_and_managing_networking/index#configuring-static-routes_configuring-and-managing-networking) from the Red Hat documentation.
+As you can see implementing static routes in Linux is reletively painless. This was a simple example. You can get extremely detailed with the route attributes, such as setting TOS values, mtu size, window size and much more. 
+
+A good resource for Static Routing is [Configuring static routes](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html-single/configuring_and_managing_networking/index#configuring-static-routes_configuring-and-managing-networking) from the Red Hat documentation.

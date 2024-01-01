@@ -3,16 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cablekitten.co.uk/</loc>
-    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/lfcs_journey/</loc>
-    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
+    <loc>https://cablekitten.co.uk/posts/linux_static_route/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/posts/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://cablekitten.co.uk/posts/lfcs_journey/</loc>
     <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
