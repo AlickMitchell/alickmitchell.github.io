@@ -59,7 +59,7 @@ Though KodeKloud provide great labs, I enjoy following along and testing what I'
 
 * Habit
 
-As will all exams, the need to touch the material daily is a must.
+As with all exams, the need to touch the material daily is a must.
 
 I used the [Domains & Competencies](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/) and the Course Outline from [Linux System Administration Essentials (LFS207)](https://training.linuxfoundation.org/training/linux-system-administration-essentials-lfs207/) to build a study spreadsheet. The LFS207 is the recommended course from the Linux Foundation. The $300 price I felt wasn't worth it personally as I was recertifying.
 
