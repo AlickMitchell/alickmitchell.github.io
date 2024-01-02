@@ -10,6 +10,11 @@ Paginate = 3 # this is set low for demonstrating with dummy content. Set to a hi
 googleAnalytics = ""
 enableRobotsTXT = true
 
+[author]
+  twitter = "https://twitter.com/AlickMitchell/"
+  email = "alickmitchell@protonmail.com"
+  name = "Cable Kitten"
+
 [languages]
   [languages.en]
     title = "Cable Kitten"
