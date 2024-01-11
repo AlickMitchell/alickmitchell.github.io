@@ -40,3 +40,8 @@ enableRobotsTXT = true
 [[params.ananke_socials]]
 name = "twitter"
 url = "https://twitter.com/AlickMitchell/"
+
+[[menu.main]]
+  name = "About"
+  pageRef = "/abouts"
+  weight = 2
