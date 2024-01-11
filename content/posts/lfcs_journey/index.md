@@ -73,6 +73,6 @@ They have upped the game when it comes to the networking knowledge required. I a
 
 ## My Take Away ##
 
-The task based exam is by far better than multiple choice exams. It really tests your knowledge. I actually enjoyed the exam. I thought it was a good test of my skills. I do think as the two exams have now been merged the Linux Foundation should provide beter signposting for what tools they will be testing you on. But that's it done for another 3yrs.
+The task based exam is by far better than multiple choice exams. It really tests your knowledge. I actually enjoyed the exam. I thought it was a good test of my skills. I do think as the two exams have now been merged the Linux Foundation should provide better signposting for what tools they will be testing you on. But that's it done for another 3yrs.
 
 ![Linux Foundation Certified System Administrator](lfcs-badge.png)
