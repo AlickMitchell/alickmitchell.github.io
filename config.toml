@@ -30,7 +30,7 @@ enableRobotsTXT = true
 [params]
   text_color = ""
   author = "Alick"
-  favicon = ""
+  favicon = "favicon-16x16.png"
   site_logo = ""
   description = "Paws in Sockets, Teeth Snagging Cables"
   # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
