@@ -1,5 +1,6 @@
 +++
 title = 'My LFCS Journey' 
+tags = ['LFCS', 'Linux']
 date  = 2023-12-13
 draft = false
 +++

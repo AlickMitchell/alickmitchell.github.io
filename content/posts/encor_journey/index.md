@@ -1,5 +1,6 @@
 +++
 title = 'My ENCOR Journey'
+tags = ['ENCOR', 'Cisco']
 date  = 2023-11-03
 draft = false
 +++
