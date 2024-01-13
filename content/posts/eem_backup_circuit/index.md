@@ -1,6 +1,7 @@
 +++
 title = 'EEM and a Downed Primary Ciruit'
 tags = ['Cisco','automation']
+keywords = ['Cisco', 'EEM', 'Automation']
 date  = 2024-01-11
 draft = false
 +++

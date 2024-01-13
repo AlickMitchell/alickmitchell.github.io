@@ -1,6 +1,7 @@
 +++
 title = 'My LFCS Journey' 
 tags = ['LFCS', 'Linux']
+keywords = ['LFCS', 'Linux', 'Certification']
 date  = 2023-12-13
 draft = false
 +++

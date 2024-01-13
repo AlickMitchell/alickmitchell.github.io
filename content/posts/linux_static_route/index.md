@@ -1,6 +1,7 @@
 +++
 title = 'Linux Static Route'
 tags = ['Linux']
+keywords = ['Linux', 'Networking']
 date  = 2024-01-01
 draft = false
 +++
