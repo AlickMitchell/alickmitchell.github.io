@@ -6,19 +6,17 @@ draft = false
 
 Alick is a Network Engineer based in the UK.
 
-- Cisco Certified Specialist - Enterprise Core
+- [Cisco Certified Specialist - Enterprise Core](https://www.credly.com/users/alick-mitchell/badges)
 
 ![Cisco Certified Specialist - Enterprise Core](encor-75x75.jpg)
 
-- Linux Foundation Certified System Administrator
+- [Linux Foundation Certified System Administrator](https://www.credly.com/users/alick-mitchell/badges)
 
 ![Linux Foundation Certified System Administrator](lfcs-75x75.png)
 
-- Cisco Certified Network Associate (CCNA)
+- [Cisco Certified Network Associate - CCNA](https://www.credly.com/users/alick-mitchell/badges)
 
-![Cisco Certified Network Associate- CCNA ](ccna_sm.jpg)
-
-- [My Credly](https://www.credly.com/users/alick-mitchell/badges)
+![Cisco Certified Network Associate - CCNA ](ccna_sm.jpg)
 
 - I come from a background of Linux system administration and engineering, but a few years back made the move over to networking. This was due to my role at the time. I found myself working at a site with a large network infrastructure(21 IDFs), plus being the hub for branch sites. Having an understanding not only helped when dealing with TB and solution development, but was essential.
 
