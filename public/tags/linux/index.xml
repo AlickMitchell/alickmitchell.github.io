@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Cable Kitten</title>
+    <link>https://cablekitten.co.uk/tags/linux/</link>
+    <description>Recent content in Linux on Cable Kitten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://cablekitten.co.uk/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Static Route</title>
+      <link>https://cablekitten.co.uk/posts/linux_static_route/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/posts/linux_static_route/</guid>
+      <description>Whilst recently recertifying for my LFCS the networking section had been further expanded and now included static routes. I thought this was fantastic. Though I know a lot of people use linux, I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.&#xA;Static routes can come in handy for connecting environments with multiple networks.</description>
+    </item>
+    <item>
+      <title>My LFCS Journey</title>
+      <link>https://cablekitten.co.uk/posts/lfcs_journey/</link>
+      <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/posts/lfcs_journey/</guid>
+      <description>I passed my Linux Foundation Certified Systems Administrator Exam a few weeks back. This was a recertification. Since I last took the exam the syllabus has been overhauled. Where previously you would choose between CentOS and Ubuntu, they have now gone for a vendor neutral approach.&#xA;I was hoping for the release of the new LFCE, but I fear that this is never coming. I did message the team a year ago and was told it was in development, but haven&amp;rsquo;t seen any update.</description>
+    </item>
+  </channel>
+</rss>

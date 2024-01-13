@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LFCS on Cable Kitten</title>
+    <link>https://cablekitten.co.uk/tags/lfcs/</link>
+    <description>Recent content in LFCS on Cable Kitten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 13 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://cablekitten.co.uk/tags/lfcs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My LFCS Journey</title>
+      <link>https://cablekitten.co.uk/posts/lfcs_journey/</link>
+      <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/posts/lfcs_journey/</guid>
+      <description>I passed my Linux Foundation Certified Systems Administrator Exam a few weeks back. This was a recertification. Since I last took the exam the syllabus has been overhauled. Where previously you would choose between CentOS and Ubuntu, they have now gone for a vendor neutral approach.&#xA;I was hoping for the release of the new LFCE, but I fear that this is never coming. I did message the team a year ago and was told it was in development, but haven&amp;rsquo;t seen any update.</description>
+    </item>
+  </channel>
+</rss>

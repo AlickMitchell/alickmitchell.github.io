@@ -4,7 +4,17 @@ date = 2023-12-12T12:57:32Z
 draft = false
 +++
 
-Alick is a Network Engineer based in the UK.
+Hey I'm Alick, a Network Engineer based in the UK.
+
+I come from a background of Linux system administration and engineering, but a few years back moved over to a more networking based focus. This was due to my role at the time. I found myself working at a site with a large network infrastructure(21 IDFs), plus being the hub for branch sites.
+
+Most of my time revolves around working on Networking, Linux and Security projects and study. But as with most guys in this sector, I get excited over just about all aspects of Computing and Tech.
+
+I put this site together just as a place to let me put [down on digital paper](https://cablekitten.co.uk), some of the topics that I'm working on.
+
+I love cats, hence the site name, but also any fluffy mammal usually has me wrapped around their paw.
+
+My Current Qualifications:
 
 - [Cisco Certified Specialist - Enterprise Core](https://www.credly.com/users/alick-mitchell/badges)
 
@@ -18,9 +28,4 @@ Alick is a Network Engineer based in the UK.
 
 ![Cisco Certified Network Associate - CCNA ](ccna_sm.jpg)
 
-- I come from a background of Linux system administration and engineering, but a few years back made the move over to networking. This was due to my role at the time. I found myself working at a site with a large network infrastructure(21 IDFs), plus being the hub for branch sites. Having an understanding not only helped when dealing with TB and solution development, but was essential.
-
-- Most of my studying revolves around Networking, Linux and Security. But as with a lot of us guys in this sector, I get excited over just about all aspects of Computing and Tech.
-
-- I love cats, hence the site name, but also any fluffy mammal usually has me wrapped around their paw.
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cisco on Cable Kitten</title>
+    <link>https://cablekitten.co.uk/tags/cisco/</link>
+    <description>Recent content in Cisco on Cable Kitten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://cablekitten.co.uk/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EEM and a Downed Primary Ciruit</title>
+      <link>https://cablekitten.co.uk/posts/eem_backup_circuit/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/posts/eem_backup_circuit/</guid>
+      <description>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the rollout of IOS-EX Cisco was limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.&#xA;I&amp;rsquo;m just going to roll through a use of EEM when we lose our Primary Connection and need to flip to our backup.</description>
+    </item>
+    <item>
+      <title>My ENCOR Journey</title>
+      <link>https://cablekitten.co.uk/posts/encor_journey/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/posts/encor_journey/</guid>
+      <description>I passed my ENCOR just over a month ago. I took it on the last day of V1.0. Thought I&amp;rsquo;d give an overview of the resources I used and how I found things. Obviously the Exam has now changed, so other resources maybe required.&#xA;Resources Core Books I would read every morning as soon as I woke. This way I guaranteed that I covered something everyday regardless of what got in the way.</description>
+    </item>
+  </channel>
+</rss>
