@@ -8,7 +8,7 @@ DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
 Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 [author]
   twitter = "https://twitter.com/AlickMitchell/"
@@ -45,4 +45,3 @@ url = "https://twitter.com/AlickMitchell/"
   name = "About"
   pageRef = "/abouts"
   weight = 2
-
