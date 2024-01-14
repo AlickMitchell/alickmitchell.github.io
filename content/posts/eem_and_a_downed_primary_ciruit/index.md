@@ -33,7 +33,7 @@ event manager applet BACKUP
  action 200 cli command "conf t"
  action 300 cli command "int gi0/2"
  action 400 cli command "no shut"
- action 500 syslog priority critical msg "THE WHOLE INTERNET IS DOWN. BRINGING UP BACKUP INTERFACE"
+ action 500 syslog priority critical msg "THE PRIMARY CIRCUIT IS DOWN. BRINGING UP BACKUP INTERFACE"
 ```
 
 - We also need to have a recovery script 'RECOVER', running for when the Primary circuit comes back up. This is our recovery script.
@@ -59,5 +59,7 @@ event manager applet RECOVER
 ```
 
 - Both of these scripts will continue to run in the background and are implemented when the variables change. For a Linux guy it's kind of like a cron job, constantly running in the background watching for the state change of set variables.
+
+- For the Backup link to be become the new default route, we'd have to set a static route with higher administrative number than the primary link. So when the Primary Circuit drops and it's removed from the routing table, the the backup route would be inserted.
 
 - This shows the power of EEM. With just a few lines of code we are able to add reliability to our network. 
