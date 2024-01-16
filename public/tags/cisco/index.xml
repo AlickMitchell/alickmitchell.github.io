@@ -6,8 +6,15 @@
     <description>Recent content in Cisco on Cable Kitten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cablekitten.co.uk/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EEM and a Downed Primary Circuit</title>
+      <link>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</guid>
+      <description>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.&#xA;I&amp;rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active.</description>
+    </item>
     <item>
       <title>My ENCOR Journey</title>
       <link>https://cablekitten.co.uk/posts/encor_journey/</link>
