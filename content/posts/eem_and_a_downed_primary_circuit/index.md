@@ -12,7 +12,7 @@ I'm just going to roll through a simple example of using EEM. We have a Primary 
 
 ## Topology ##
 
-![Cisco Certified Specialist - Enterprise Core](topology.png)
+![Topology](topology.png)
 
 ## Implementation ##
 
