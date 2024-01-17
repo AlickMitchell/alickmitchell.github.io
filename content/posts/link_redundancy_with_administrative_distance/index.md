@@ -6,7 +6,7 @@ date  = 2024-01-17
 draft = false
 +++
 
-In the previous post I worked through how to use EEM when we had the constraint of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.
+In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.
 
 ### Administratvie Distance ###
 This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I'll be using Cisco devices in this example. The lower the AD(Administrative Value) value the more reliable a route is deemed.
@@ -19,7 +19,7 @@ This is a metric that is used by vendors to rate the reliability of a route. Ven
 |OSPF            | 110|
 |RIP             | 120|
 
-Above we can see some values for routing protcols, static and connected routes.
+Above we can see some values for routing protocols, static and connected routes.
 
 Administrative distance comes into play when we have two identical routes, but they are provided by different methods. 
 
@@ -71,7 +71,7 @@ Site-A#sh ip ospf database router 10.10.11.1
 
 ### Dropping of Connections ###
 
-With no routes removed this is the routing table entry for 10.10.11.0/24
+With no connections removed this is the routing table entry for 10.10.11.0/24
 ```
 Site-A#sh ip route 10.10.11.0 255.255.255.0
 Routing entry for 10.10.11.0/24
@@ -80,7 +80,7 @@ Routing entry for 10.10.11.0/24
   * 10.10.1.2, via GigabitEthernet0/1
       Route metric is 0, traffic share count is 1
 ```
-- We can see that the route is a static route and has the default AD of 1.
+- We can see that the route is a static route and has the default AD of 1, and is connected over Gigabitethernet0/1.
 
 
 We'll now drop the connection to R1
@@ -106,6 +106,6 @@ Routing entry for 10.10.11.0/24
 ```
 - And finally we see the OSPF route being used as it has the AD of 110.
 
-Though all these routes weren't present in the Routing Table, they weren't discarded, but held by the router until they became the more favourable route.
+Though all these routes weren't present in the initial Routing Table, they weren't discarded, but held by the router until they became the more favourable route.
 
 
