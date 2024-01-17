@@ -42,7 +42,7 @@ event manager applet BACKUP
  action 500 syslog priority critical msg "THE PRIMARY CIRCUIT IS DOWN. BRINGING UP BACKUP INTERFACE"
 ```
 
-- We also create a recovery script 'RECOVER', this will also be monitoring the track object we created. If the objects states changes from up to down, it will loop continually while returning 'false', using a ping as it's testing mechanism. If the the ping detects the lPrimary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery. 
+- We also create a recovery script 'RECOVER', this will also be monitoring the track object we created. If the objects states changes from up to down, it will loop continually while returning 'false', using a ping as it's testing mechanism. If the the ping detects the Primary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery. 
 ```
 event manager applet RECOVER
  event track 1 state up
