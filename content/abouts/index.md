@@ -14,7 +14,7 @@ Most of my time revolves around working on Networking, Linux and Security projec
 
 I put this site together just as a place to let me put [down on digital paper](https://cablekitten.co.uk), some of the topics that I'm working on.
 
-I love cats, hence the site name, but also any fluffy mammal usually has me wrapped around their paw.
+The name of the site, comes from my love of cats, but any fluffy mammal usually has me wrapped around their paw.
 
 Qualifications:
 
