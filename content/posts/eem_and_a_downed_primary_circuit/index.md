@@ -42,7 +42,7 @@ event manager applet BACKUP
  action 500 syslog priority critical msg "THE PRIMARY CIRCUIT IS DOWN. BRINGING UP BACKUP INTERFACE"
 ```
 
-- We also create a recovery script 'RECOVER', this will also be monitoring the track object we created. If the objects states changes from up to down, it will loop continually while returning 'false', using a ping as it's testing mechanism. If the the ping detects the Primary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery. 
+- We also create a recovery script 'RECOVER', this will also be monitoring the track object we created. If the objects state changes from up to down, it will loop continually while returning 'false', using a ping as it's testing mechanism. If the the ping detects the Primary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery. 
 ```
 event manager applet RECOVER
  event track 1 state up
@@ -72,4 +72,4 @@ ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/2 192.168.14.4
 ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/1 192.168.13.3 20
 ```
 
-- This shows the power of EEM. With just a few lines of code we are able to add reliability to our network even when certain constraints applied. A good reference for both EEM and TCL is the [TcL Scripting for Cisco IOS - Cisco Press](https://www.ciscopress.com/store/tcl-scripting-for-cisco-ios-9780133433739). 
+- This shows the power of EEM. With just a few lines of code we are able to add reliability to our network even when certain constraints are applied. A good reference for both EEM and TCL is the [TcL Scripting for Cisco IOS - Cisco Press](https://www.ciscopress.com/store/tcl-scripting-for-cisco-ios-9780133433739). 
