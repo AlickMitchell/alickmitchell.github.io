@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Link Redundancy with Administrative Distance | Cable Kitten</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.
+Administratvie Distance This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&rsquo;ll be using Cisco devices in this example.">
+    <meta name="generator" content="Hugo 0.121.2">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+<link rel="shortcut icon" href="/favicon-16x16.png" type="image/x-icon" />
+
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/">
+    
+
+    <meta property="og:title" content="Link Redundancy with Administrative Distance" />
+<meta property="og:description" content="In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.
+Administratvie Distance This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&rsquo;ll be using Cisco devices in this example." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-17T00:00:00+00:00" />
+
+<meta itemprop="name" content="Link Redundancy with Administrative Distance">
+<meta itemprop="description" content="In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.
+Administratvie Distance This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&rsquo;ll be using Cisco devices in this example."><meta itemprop="datePublished" content="2024-01-17T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-01-17T00:00:00+00:00" />
+<meta itemprop="wordCount" content="706">
+<meta itemprop="keywords" content="Cisco,Routing," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Link Redundancy with Administrative Distance"/>
+<meta name="twitter:description" content="In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.
+Administratvie Distance This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&rsquo;ll be using Cisco devices in this example."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-navy">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Cable Kitten
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/abouts/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/AlickMitchell/" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://twitter.com/intent/tweet?url=https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/&amp;text=Link%20Redundancy%20with%20Administrative%20Distance" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Link Redundancy with Administrative Distance</h1>
+      
+      <p class="tracked">
+        By <strong>Alick</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-01-17T00:00:00Z">January 17, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.</p>
+<h3 id="administratvie-distance">Administratvie Distance</h3>
+<p>This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&rsquo;ll be using Cisco devices in this example. The lower the AD(Administrative Value) value the more reliable a route is deemed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Protocol</th>
+<th style="text-align:right">Administrative Distance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Connected</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td style="text-align:left">Static</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td style="text-align:left">eBGP</td>
+<td style="text-align:right">20</td>
+</tr>
+<tr>
+<td style="text-align:left">OSPF</td>
+<td style="text-align:right">110</td>
+</tr>
+<tr>
+<td style="text-align:left">RIP</td>
+<td style="text-align:right">120</td>
+</tr>
+</tbody>
+</table>
+<p>Above we can see some values for routing protocols, static and connected routes.</p>
+<p>Administrative distance comes into play when we have two identical routes, but they are provided by different methods.</p>
+<p>If OSPF has a route for 10.10.1.0/24 and we have a static route for 10.10.1.0/24, the static route will be placed into the routing table as it has the lower AD. Though the OSPF route isn&rsquo;t entered into the routing table it still kept in the OSPF Database. If the static route was to be removed it would then be inserted into the Routing table.</p>
+<p>This functionality can be used by use to implement redundancy. If we have a Primary circuit and a Backup circuit we can set the Backup with a higher AD and if the Primary ever fails, the Backup will be inserted into the routing table.</p>
+<p>In the following example I&rsquo;ll show how the routing table is influenced by different AD values. We&rsquo;ll have one default static route(Site-A - R1), one static route with a modified AD of 10(Site-A - R2), and one OSPF advertisement(Site-A - R3 - Site-B). We&rsquo;ll drop connections and see how routes are added to the routing table.</p>
+<h3 id="topology">Topology</h3>
+<p><img src="topology.png" alt="Topology"></p>
+<ul>
+<li>Site-A static routes</li>
+</ul>
+<pre tabindex="0"><code>ip route 10.10.11.0 255.255.255.0 GigabitEthernet0/1 10.10.1.2
+ip route 10.10.11.0 255.255.255.0 GigabitEthernet0/2 10.10.1.6 10
+</code></pre><ul>
+<li>From the OSPF database at Site-A we can see that Site-B is advertising a Type 1 LSA for the 10.10.11.0/24 network</li>
+</ul>
+<pre tabindex="0"><code>Site-A#sh ip ospf database router 10.10.11.1 
+
+            OSPF Router with ID (10.10.10.1) (Process ID 10)
+
+                Router Link States (Area 0)
+
+  LS age: 315
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 10.10.11.1
+  Advertising Router: 10.10.11.1
+  LS Seq Number: 8000000B
+  Checksum: 0x5A1F
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Stub Network
+     (Link ID) Network/subnet number: 10.10.11.0
+     (Link Data) Network Mask: 255.255.255.0
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.10.2.10
+     (Link Data) Router Interface address: 10.10.2.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+</code></pre><h3 id="dropping-of-connections">Dropping of Connections</h3>
+<p>With no connections removed this is the routing table entry for 10.10.11.0/24</p>
+<pre tabindex="0"><code>Site-A#sh ip route 10.10.11.0 255.255.255.0
+Routing entry for 10.10.11.0/24
+  Known via &#34;static&#34;, distance 1, metric 0
+  Routing Descriptor Blocks:
+  * 10.10.1.2, via GigabitEthernet0/1
+      Route metric is 0, traffic share count is 1
+</code></pre><ul>
+<li>We can see that the route is a static route and has the default AD of 1, and is connected over Gigabitethernet0/1.</li>
+</ul>
+<p>We&rsquo;ll now drop the connection to R1</p>
+<pre tabindex="0"><code>Site-A#sh ip route 10.10.11.0 255.255.255.0  
+Routing entry for 10.10.11.0/24
+  Known via &#34;static&#34;, distance 10, metric 0
+  Routing Descriptor Blocks:
+  * 10.10.1.6, via GigabitEthernet0/2
+      Route metric is 0, traffic share count is 1
+</code></pre><ul>
+<li>We now see that the traffic will be moving through R2. Though static routes have a default of 1, we have the ability to manually set the AD of the route. If you look back at the routes you&rsquo;ll notice that it was set to 10. If both routes would have been set to 1 we would have seen a function called Equal Cost Multi-Path(ECMP) take place, where both routes would be used equally.</li>
+</ul>
+<p>We&rsquo;ll now drop the connection to R2</p>
+<pre tabindex="0"><code>Routing entry for 10.10.11.0/24
+  Known via &#34;ospf 10&#34;, distance 110, metric 3, type intra area
+  Last update from 10.10.1.10 on GigabitEthernet0/3, 00:00:08 ago
+  Routing Descriptor Blocks:
+  * 10.10.1.10, from 10.10.11.1, 00:00:08 ago, via GigabitEthernet0/3
+      Route metric is 3, traffic share count is 1
+</code></pre><ul>
+<li>And finally we see the OSPF route being used as it has the AD of 110.</li>
+</ul>
+<p>Though all these routes weren&rsquo;t present in the initial Routing Table, they weren&rsquo;t discarded, but held by the router until they became the more favourable route.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/cisco/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Cisco</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/routing/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Routing</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/eem_and_a_downed_primary_circuit/">EEM and a Downed Primary Circuit</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/encor_journey/">My ENCOR Journey</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-navy bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://cablekitten.co.uk/" >
+    &copy;  Cable Kitten 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/AlickMitchell/" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

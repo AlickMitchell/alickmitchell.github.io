@@ -166,7 +166,7 @@ I&rsquo;m just going to roll through a simple example of using EEM. We have a Pr
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.</p>
 <p>I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active. So if we lose our Primary Connection, the interface connected to the Backup circuit needs to be brought up. This can be scripted with EEM, we&rsquo;ll also put recovery in there. So when the Primary circuit comes back we shut down our interface to the Backup circuit.</p>
 <h2 id="topology">Topology</h2>
-<p><img src="topology.png" alt="Cisco Certified Specialist - Enterprise Core"></p>
+<p><img src="topology.png" alt="Topology"></p>
 <h2 id="implementation">Implementation</h2>
 <p>So we&rsquo;ll be using EEM and also &lsquo;IP SLA&rsquo; to perform this.</p>
 <ul>
@@ -191,7 +191,7 @@ ip sla schedule 1 life forever start-time now
  action 400 cli command &#34;no shut&#34;
  action 500 syslog priority critical msg &#34;THE PRIMARY CIRCUIT IS DOWN. BRINGING UP BACKUP INTERFACE&#34;
 </code></pre><ul>
-<li>We also create a recovery script &lsquo;RECOVER&rsquo;, this will also be monitoring the track object we created. If the objects states changes from up to down, it will loop continually while returning &lsquo;false&rsquo;, using a ping as it&rsquo;s testing mechanism. If the the ping detects the lPrimary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery.</li>
+<li>We also create a recovery script &lsquo;RECOVER&rsquo;, this will also be monitoring the track object we created. If the objects states changes from up to down, it will loop continually while returning &lsquo;false&rsquo;, using a ping as it&rsquo;s testing mechanism. If the the ping detects the Primary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery.</li>
 </ul>
 <pre tabindex="0"><code>event manager applet RECOVER
  event track 1 state up

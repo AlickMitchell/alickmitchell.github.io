@@ -6,8 +6,15 @@
     <description>Recent content in Cisco on Cable Kitten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cablekitten.co.uk/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Link Redundancy with Administrative Distance</title>
+      <link>https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/</link>
+      <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/</guid>
+      <description>In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.&#xA;Administratvie Distance This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&amp;rsquo;ll be using Cisco devices in this example.</description>
+    </item>
     <item>
       <title>EEM and a Downed Primary Circuit</title>
       <link>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</link>

@@ -8,7 +8,7 @@ Hey, I'm Alick, a Network Engineer based in the UK.
 
 I come from a background of Linux system administration and engineering, working in positions in hosting, dealing with Asterisk PBX's, to more industrial settings with large deployments of thin clients. 
 
-A few years back though I moved into a role where I administered a large IT infrastructure of which Linux was the main OS, but  the site also had a large on-site network infrastructure, plus was a hub for branch sites. This starting me spending more time developing my networking skills, and moving eventually over to becoming a Network Engineer. 
+A few years back though I moved into a role where I administered a large IT infrastructure of which Linux was the main OS, but  the site also had a large on-site network infrastructure, plus was a hub for branch sites. This lead me to spending more time developing my networking skills, and moving eventually over to becoming a Network Engineer. 
 
 Most of my time revolves around working on Networking, Linux and Security projects and study. But as with most guys in this sector, I get excited over just about all aspects of Computing and Tech.
 
