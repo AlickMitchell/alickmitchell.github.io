@@ -6,7 +6,7 @@ date  = 2024-01-11
 draft = false
 +++
 
-The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
+The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
 
 I'm just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active. So if we lose our Primary Connection, the interface connected to the Backup circuit needs to be brought up. This can be scripted with EEM, we'll also put recovery in there. So when the Primary circuit comes back we shut down our interface to the Backup circuit.
 

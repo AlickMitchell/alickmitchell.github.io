@@ -6,18 +6,18 @@
     
     <title>EEM and a Downed Primary Circuit | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
+    <meta name="description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
 I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active.">
     <meta name="generator" content="Hugo 0.121.2">
     
     
     
     
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.583db2df44f25197f10178d930866e6f2e92f79c5bc910541d9e3a652fd39bb1.css" >
 
 
 
@@ -37,7 +37,7 @@ I&rsquo;m just going to roll through a simple example of using EEM. We have a Pr
     
 
     <meta property="og:title" content="EEM and a Downed Primary Circuit" />
-<meta property="og:description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
+<meta property="og:description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
 I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/" /><meta property="article:section" content="posts" />
@@ -45,18 +45,20 @@ I&rsquo;m just going to roll through a simple example of using EEM. We have a Pr
 <meta property="article:modified_time" content="2024-01-11T00:00:00+00:00" />
 
 <meta itemprop="name" content="EEM and a Downed Primary Circuit">
-<meta itemprop="description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
+<meta itemprop="description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
 I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active."><meta itemprop="datePublished" content="2024-01-11T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-01-11T00:00:00+00:00" />
-<meta itemprop="wordCount" content="605">
+<meta itemprop="wordCount" content="607">
 <meta itemprop="keywords" content="Cisco,Automation," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="EEM and a Downed Primary Circuit"/>
-<meta name="twitter:description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
+<meta name="twitter:description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
 I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active."/>
 
+      
+    
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white">
+  <body class="ma0 avenir bg-near-white production">
 
     
    
@@ -163,7 +165,7 @@ I&rsquo;m just going to roll through a simple example of using EEM. We have a Pr
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.</p>
 <p>I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active. So if we lose our Primary Connection, the interface connected to the Backup circuit needs to be brought up. This can be scripted with EEM, we&rsquo;ll also put recovery in there. So when the Primary circuit comes back we shut down our interface to the Backup circuit.</p>
 <h2 id="topology">Topology</h2>
 <p><img src="topology.png" alt="Topology"></p>
@@ -191,7 +193,7 @@ ip sla schedule 1 life forever start-time now
  action 400 cli command &#34;no shut&#34;
  action 500 syslog priority critical msg &#34;THE PRIMARY CIRCUIT IS DOWN. BRINGING UP BACKUP INTERFACE&#34;
 </code></pre><ul>
-<li>We also create a recovery script &lsquo;RECOVER&rsquo;, this will also be monitoring the track object we created. If the objects states changes from up to down, it will loop continually while returning &lsquo;false&rsquo;, using a ping as it&rsquo;s testing mechanism. If the the ping detects the Primary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery.</li>
+<li>We also create a recovery script &lsquo;RECOVER&rsquo;, this will also be monitoring the track object we created. If the objects state changes from up to down, it will loop continually while returning &lsquo;false&rsquo;, using a ping as it&rsquo;s testing mechanism. If the the ping detects the Primary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery.</li>
 </ul>
 <pre tabindex="0"><code>event manager applet RECOVER
  event track 1 state up
@@ -222,7 +224,7 @@ ip sla schedule 1 life forever start-time now
 <pre tabindex="0"><code>ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/2 192.168.14.4
 ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/1 192.168.13.3 20
 </code></pre><ul>
-<li>This shows the power of EEM. With just a few lines of code we are able to add reliability to our network even when certain constraints applied. A good reference for both EEM and TCL is the <a href="https://www.ciscopress.com/store/tcl-scripting-for-cisco-ios-9780133433739">TcL Scripting for Cisco IOS - Cisco Press</a>.</li>
+<li>This shows the power of EEM. With just a few lines of code we are able to add reliability to our network even when certain constraints are applied. A good reference for both EEM and TCL is the <a href="https://www.ciscopress.com/store/tcl-scripting-for-cisco-ios-9780133433739">TcL Scripting for Cisco IOS - Cisco Press</a>.</li>
 </ul>
 <ul class="pa0">
   

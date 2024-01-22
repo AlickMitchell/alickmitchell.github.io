@@ -4,20 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>EEM Backup Ciruit | Cable Kitten</title>
+    <title>GRE Tunnel Between Cisco and Linux | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the rollout of IOS-EX Cisco was limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
-I&rsquo;m just going to roll through a use of EEM when we lose our Primary Connection and need to flip to our backup.">
+    <meta name="description" content="GRE tunnels can provide use with a lot of versatility when needing to move didn&rsquo;t protocols between">
     <meta name="generator" content="Hugo 0.121.2">
     
     
     
     
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.583db2df44f25197f10178d930866e6f2e92f79c5bc910541d9e3a652fd39bb1.css" >
 
 
 
@@ -33,30 +32,29 @@ I&rsquo;m just going to roll through a use of EEM when we lose our Primary Conne
     
 
     
-      <link rel="canonical" href="https://cablekitten.co.uk/posts/eem_backup_circuit/">
+      <link rel="canonical" href="https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/">
     
 
-    <meta property="og:title" content="EEM Backup Ciruit" />
-<meta property="og:description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the rollout of IOS-EX Cisco was limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
-I&rsquo;m just going to roll through a use of EEM when we lose our Primary Connection and need to flip to our backup." />
+    <meta property="og:title" content="GRE Tunnel Between Cisco and Linux" />
+<meta property="og:description" content="GRE tunnels can provide use with a lot of versatility when needing to move didn&rsquo;t protocols between" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cablekitten.co.uk/posts/eem_backup_circuit/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-11T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-01-11T00:00:00+00:00" />
+<meta property="og:url" content="https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-21T00:00:00+00:00" />
 
-<meta itemprop="name" content="EEM Backup Ciruit">
-<meta itemprop="description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the rollout of IOS-EX Cisco was limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
-I&rsquo;m just going to roll through a use of EEM when we lose our Primary Connection and need to flip to our backup."><meta itemprop="datePublished" content="2024-01-11T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2024-01-11T00:00:00+00:00" />
-<meta itemprop="wordCount" content="425">
-<meta itemprop="keywords" content="Cisco,automation," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="EEM Backup Ciruit"/>
-<meta name="twitter:description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the rollout of IOS-EX Cisco was limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.
-I&rsquo;m just going to roll through a use of EEM when we lose our Primary Connection and need to flip to our backup."/>
+<meta itemprop="name" content="GRE Tunnel Between Cisco and Linux">
+<meta itemprop="description" content="GRE tunnels can provide use with a lot of versatility when needing to move didn&rsquo;t protocols between"><meta itemprop="datePublished" content="2024-01-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-01-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="17">
+<meta itemprop="keywords" content="Cisco,Linux,Tuneling," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="GRE Tunnel Between Cisco and Linux"/>
+<meta name="twitter:description" content="GRE tunnels can provide use with a lot of versatility when needing to move didn&rsquo;t protocols between"/>
 
+      
+    
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white">
+  <body class="ma0 avenir bg-near-white production">
 
     
    
@@ -139,7 +137,7 @@ I&rsquo;m just going to roll through a use of EEM when we lose our Primary Conne
   <div id="sharing" class="mt3 ananke-socials">
     
       
-      <a href="https://twitter.com/intent/tweet?url=https://cablekitten.co.uk/posts/eem_backup_circuit/&amp;text=EEM%20Backup%20Ciruit" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+      <a href="https://twitter.com/intent/tweet?url=https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/&amp;text=GRE%20Tunnel%20Between%20Cisco%20and%20Linux" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
         
         <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
 </span>
@@ -149,7 +147,7 @@ I&rsquo;m just going to roll through a use of EEM when we lose our Primary Conne
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">EEM Backup Ciruit</h1>
+      <h1 class="f1 athelas mt3 mb1">GRE Tunnel Between Cisco and Linux</h1>
       
       <p class="tracked">
         By <strong>Alick</strong>
@@ -157,65 +155,13 @@ I&rsquo;m just going to roll through a use of EEM when we lose our Primary Conne
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2024-01-11T00:00:00Z">January 11, 2024</time>
+      <time class="f6 mv4 dib tracked" datetime="2024-01-21T00:00:00Z">January 21, 2024</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the rollout of IOS-EX Cisco was limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are very useful.</p>
-<p>I&rsquo;m just going to roll through a use of EEM when we lose our Primary Connection and need to flip to our backup. This can be scripted with EEM, we&rsquo;ll also put recovery in there. So when the primary ciruit comes back we switch from the backup to the primary.</p>
-<p>So we&rsquo;ll be using EEM and also &lsquo;IP SLA&rsquo; to perform this.</p>
-<ul>
-<li>First we need to create our ip sla instance. This will instruct the device to check the connectivity of the Primary Circuit.</li>
-</ul>
-<pre tabindex="0"><code>ip sla 1
- icmp-echo 192.168.24.4 source-interface GigabitEthernet0/3
- frequency 5
-ip sla schedule 1 life forever start-time now
-</code></pre><ul>
-<li>To attach the sla instance with EEM we create a track object</li>
-</ul>
-<pre tabindex="0"><code>track 1 ip sla 1 reachability
-</code></pre><ul>
-<li>Now we create the &lsquo;BACKUP&rsquo; EEM script that will watch the track object, and will bring up our secondary link and print a syslog message if it drops.</li>
-</ul>
-<pre tabindex="0"><code>event manager applet BACKUP
- event track 1 state down
- action 100 cli command &#34;enable&#34;
- action 200 cli command &#34;conf t&#34;
- action 300 cli command &#34;int gi0/2&#34;
- action 400 cli command &#34;no shut&#34;
- action 500 syslog priority critical msg &#34;THE WHOLE INTERNET IS DOWN. BRINGING UP BACKUP INTERFACE&#34;
-</code></pre><ul>
-<li>We also need to have a recovery script &lsquo;RECOVER&rsquo;, running for when the Primary circuit comes back up. This is our recovery script.</li>
-</ul>
-<pre tabindex="0"><code>event manager applet RECOVER
- event track 1 state up
- action 100 cli command &#34;enable&#34;
- action 110 set DONE &#34;0&#34;
- action 120 while $DONE ne 1
- action 130  wait 5
- action 140  cli command &#34;ping 10.2.2.2 so gi0/3&#34;
- action 150  regexp &#34;!!!&#34; &#34;$_cli_result&#34;
- action 160  if $_regexp_result eq &#34;1&#34;
- action 170   cli command &#34;enable&#34;
- action 181   cli command &#34;conf t&#34;
- action 192   cli command &#34;int gi0/2&#34;
- action 200   cli command &#34;shut&#34;
- action 210   cli command &#34;end&#34;
- action 220   set DONE &#34;1&#34;
- action 230  end
- action 240 end
- action 250 syslog priority notifications msg &#34;Primary Interface Restored&#34;
-</code></pre><ul>
-<li>
-<p>Both of these scripts will continue to run in the background and are implemented when the variables change. For a Linux guy it&rsquo;s kind of like a cron job, constantly running in the background watching for the state change of set variables.</p>
-</li>
-<li>
-<p>This shows the power of EEM. With just a few lines of code we are able to add reliability to our network.</p>
-</li>
-</ul>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>GRE tunnels can provide use with a lot of versatility when needing to move didn&rsquo;t protocols between</p>
 <ul class="pa0">
   
    <li class="list di">
@@ -223,7 +169,11 @@ ip sla schedule 1 life forever start-time now
    </li>
   
    <li class="list di">
-     <a href="/tags/automation/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">automation</a>
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/tuneling/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Tuneling</a>
    </li>
   
 </ul>
@@ -242,6 +192,22 @@ ip sla schedule 1 life forever start-time now
     <p class="f5 b mb3">Related</p>
     <ul class="pa0 list">
 	   
+	     <li  class="mb2">
+          <a href="/posts/link_redundancy_with_administrative_distance/">Link Redundancy with Administrative Distance</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/eem_and_a_downed_primary_circuit/">EEM and a Downed Primary Circuit</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/linux_static_route/">Linux Static Route</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/lfcs_journey/">My LFCS Journey</a>
+        </li>
+	    
 	     <li  class="mb2">
           <a href="/posts/encor_journey/">My ENCOR Journey</a>
         </li>
