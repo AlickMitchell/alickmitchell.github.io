@@ -1,8 +1,9 @@
-+++
-title = 'About'
-date = 2023-12-12T12:57:32Z
-draft = false
-+++
+---
+title: 'About'
+date: 2023-12-12T12:57:32Z
+draft: false
+featured_image: '/cablekitten_bkg.png'
+---
 
 Hey, I'm Alick, a Network Engineer based in the UK.
 

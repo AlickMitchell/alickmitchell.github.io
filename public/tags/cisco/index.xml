@@ -6,14 +6,14 @@
     <description>Recent content in Cisco on Cable Kitten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cablekitten.co.uk/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GRE Tunnel Between Cisco and Linux</title>
+      <title>GRE Tunneling Between Cisco and Linux</title>
       <link>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</link>
-      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</guid>
-      <description>GRE tunnels can provide use with a lot of versatility when needing to move didn&amp;rsquo;t protocols between</description>
+      <description>Generic Routing Encapsulation(GRE) tunnels are a technology that was developed by Cisco but, is now an open standard through RFC 2784. GRE tunnels can provide use with a lot of versatility when needing to move different protocols between networks. Though we have now moved into an era that is predominantly TCP/IP, when GRE was developed it was at a time of multiple network technologies, IPX, Appletalk, Token Ring, etc, flourished. GRE provided the ability to encapsulate these technologies and let them traverse an Internet Protocol network.</description>
     </item>
     <item>
       <title>Link Redundancy with Administrative Distance</title>
