@@ -6,8 +6,7 @@
     
     <title>EEM and a Downed Primary Circuit | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
-I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active.">
+    <meta name="description" content="This post will discuss the use of EEM for redundancy">
     <meta name="generator" content="Hugo 0.121.2">
     
     
@@ -37,21 +36,18 @@ I&rsquo;m just going to roll through a simple example of using EEM. We have a Pr
     
 
     <meta property="og:title" content="EEM and a Downed Primary Circuit" />
-<meta property="og:description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
-I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active." />
+<meta property="og:description" content="This post will discuss the use of EEM for redundancy" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-11T00:00:00+00:00" />
 <meta property="article:modified_time" content="2024-01-11T00:00:00+00:00" />
 
 <meta itemprop="name" content="EEM and a Downed Primary Circuit">
-<meta itemprop="description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
-I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active."><meta itemprop="datePublished" content="2024-01-11T00:00:00+00:00" />
+<meta itemprop="description" content="This post will discuss the use of EEM for redundancy"><meta itemprop="datePublished" content="2024-01-11T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-01-11T00:00:00+00:00" />
 <meta itemprop="wordCount" content="607">
 <meta itemprop="keywords" content="Cisco,Automation," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="EEM and a Downed Primary Circuit"/>
-<meta name="twitter:description" content="The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.
-I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active."/>
+<meta name="twitter:description" content="This post will discuss the use of EEM for redundancy"/>
 
       
     
@@ -253,7 +249,7 @@ ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/1 192.168.13.3 20
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/posts/encor_journey/">My ENCOR Journey</a>
+          <a href="/posts/encor_journey/">My Cisco ENCOR Journey</a>
         </li>
 	    
     </ul>

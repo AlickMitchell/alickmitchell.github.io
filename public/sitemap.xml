@@ -4,91 +4,91 @@
   <url>
     <loc>https://cablekitten.co.uk/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/tags/cisco/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/tags/linux/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/posts/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/tags/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/tags/tunneling/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/tags/routing/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/tags/automation/</loc>
     <lastmod>2024-01-11T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</loc>
     <lastmod>2024-01-11T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/posts/linux_static_route/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/tags/lfcs/</loc>
     <lastmod>2023-12-13T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/posts/lfcs_journey/</loc>
     <lastmod>2023-12-13T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/abouts/</loc>
     <lastmod>2023-12-12T12:57:32+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/tags/encor/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/posts/encor_journey/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://cablekitten.co.uk/categories/</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 </urlset>
