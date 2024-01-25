@@ -1,12 +1,13 @@
 +++
-title = 'My ENCOR Journey'
+title = 'My Cisco ENCOR Journey'
 tags = ['ENCOR', 'Cisco']
 keywords = ['Cisco', 'ENCOR', 'Certification']
 date  = 2023-11-03
 draft = false
+description = "This post is a review of my experience of the Cisco Enterpirse Network Core Technologies(ENCOR) Exam"
 +++
 
-I passed my ENCOR just over a month ago. I took it on the last day of V1.0.
+I passed my Cisco ENCOR exam just over a month ago. I took it on the last day of V1.0.
 Thought I'd give an overview of the resources I used and how I found things.
 Obviously the Exam has now changed, so other resources maybe required.
 

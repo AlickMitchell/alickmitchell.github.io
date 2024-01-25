@@ -4,6 +4,7 @@ tags: ['Cisco','Linux','Tunneling']
 keywords: ['Cisco', 'Linux', 'Tunneling']
 date: 2024-01-23
 draft: false
+description: "This post walks through setting up a GRE tunnel between an Oracle Linux machine and a Cisco router"
 ---
 
 Generic Routing Encapsulation(GRE) tunnels are a technology that was developed by Cisco but, is now an open standard through [RFC 2784](https://www.rfc-editor.org/rfc/rfc2784).

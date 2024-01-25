@@ -23,7 +23,7 @@ enableRobotsTXT = false
     # languageDirection = 'rtl' for Right-To-Left languages
 
 [sitemap]
-  changefreq = "monthly"
+  changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
@@ -32,14 +32,13 @@ enableRobotsTXT = false
   author = "Alick"
   favicon = "favicon-16x16.png"
   site_logo = ""
-  description = "Paws in Sockets, Teeth Snagging Cables"
-  # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  description = "Welcome to my site. Here youll find posts covering Networking, Linux and other things I find intresting"
   background_color_class = "bg-navy"
   recent_posts_number = 4
 
 [[params.ananke_socials]]
-name = "twitter"
-url = "https://twitter.com/AlickMitchell/"
+  name = "twitter"
+  url = "https://twitter.com/AlickMitchell/"
 
 [[menu.main]]
   name = "About"

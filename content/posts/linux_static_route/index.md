@@ -4,6 +4,7 @@ tags = ['Linux']
 keywords = ['Linux', 'Networking']
 date  = 2024-01-01
 draft = false
+description = "This post walks through the setting up of static routes on Linux"
 +++
 
 Whilst recently recertifying for my LFCS the networking section had been further expanded and now included static routes. I thought this was fantastic. Though I know a lot of people use linux, I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route. 

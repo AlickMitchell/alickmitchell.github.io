@@ -1,9 +1,10 @@
 ---
 title: 'EEM and a Downed Primary Circuit'
-tags: ['Cisco','Automation']
+tags: ['Cisco', 'Automation']
 keywords: ['Cisco', 'EEM', 'Automation']
 date: 2024-01-11
 draft: false
+description: "This post will discuss the use of EEM for redundancy"
 ---
 
 The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.

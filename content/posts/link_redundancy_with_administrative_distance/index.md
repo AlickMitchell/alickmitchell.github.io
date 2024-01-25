@@ -4,6 +4,7 @@ tags: ['Cisco','Routing']
 keywords: ['Cisco', 'Routing', 'Administrative Distance', 'AD']
 date: 2024-01-17
 draft: false
+description: "This post discusses Administrative Distance for link redundancy on Cisco routers"
 ---
 
 In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.
