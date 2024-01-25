@@ -9,7 +9,7 @@ draft: false
 In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.
 
 ### Administratvie Distance ###
-This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I'll be using Cisco devices in this example. The lower the AD(Administrative Value) value the more reliable a route is deemed.
+This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I'll be using Cisco devices in this example. The lower the AD(Administrative Distance) value the more reliable a route is deemed.
 
 |Protocol        |Administrative Distance|
 |:---------------|----------------------:|
