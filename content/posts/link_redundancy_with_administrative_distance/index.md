@@ -26,7 +26,7 @@ Administrative distance comes into play when we have two identical routes, but t
 
 If OSPF has a route for 10.10.1.0/24 and we have a static route for 10.10.1.0/24, the static route will be placed into the routing table as it has the lower AD. Though the OSPF route isn't entered into the routing table it still kept in the OSPF Database. If the static route was to be removed it would then be inserted into the Routing table.
 
-This functionality can be used by use to implement redundancy. If we have a Primary circuit and a Backup circuit we can set the Backup with a higher AD and if the Primary ever fails, the Backup will be inserted into the routing table.
+This functionality can be used by us to implement redundancy. If we have a Primary circuit and a Backup circuit we can set the Backup with a higher AD and if the Primary ever fails, the Backup will be inserted into the routing table.
 
 In the following example I'll show how the routing table is influenced by different AD values. We'll have one default static route(Site-A - R1), one static route with a modified AD of 10(Site-A - R2), and one OSPF advertisement(Site-A - R3 - Site-B). We'll drop connections and see how routes are added to the routing table.
 
