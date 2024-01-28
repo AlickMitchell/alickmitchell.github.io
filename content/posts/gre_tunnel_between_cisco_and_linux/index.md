@@ -12,7 +12,7 @@ GRE tunnels can provide use with a lot of versatility when needing to move diffe
 
 Though we no longer live with those antiquated technologies, it doesn't mean that GRE has lost its usefulness. We have seen the last IPv4 addresses issued, and though we've heard the warning, "IPv6 is just around the corner" for over two decades, I do feel we might be finally seeing it arrive(and that's a good thing). During the migration to IPv6 we'll see situations where we have discontiguous networks. Where islands of IPv6 networks are connected by IPv4 networks. This is where GRE tunnels can help. GRE has the ability to encapsulate the IPv6 traffic and transport it over the IPv4 network.
 
-One consideration that has to be taken into account when using GRE, is that alone, it doesn't have any secuirty. All traffic is sent in the clear. We can add IPsec to provide security to our traffic, but in this example we'll just be implementing a simple GRE tunnel.
+One consideration that has to be taken into account when using GRE, is that alone, it doesn't have any security. All traffic is sent in the clear. We can add IPsec to provide security to our traffic, but in this example we'll just be implementing a simple GRE tunnel.
 
 The following example will show the interoperability of GRE between a Cisco router and an Oracle Linux box functioning as a router.
 
