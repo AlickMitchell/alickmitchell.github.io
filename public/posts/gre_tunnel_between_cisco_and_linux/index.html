@@ -12,11 +12,11 @@
     
     
     
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.583db2df44f25197f10178d930866e6f2e92f79c5bc910541d9e3a652fd39bb1.css" >
 
 
 
@@ -49,10 +49,12 @@
 <meta itemprop="keywords" content="Cisco,Linux,Tunneling," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="GRE Tunneling Between Cisco and Linux"/>
 <meta name="twitter:description" content="This post walks through setting up a GRE tunnel between an Oracle Linux machine and a Cisco router"/>
 
+      
+    
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white">
+  <body class="ma0 avenir bg-near-white production">
 
     
    
@@ -162,7 +164,7 @@
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Generic Routing Encapsulation(GRE) tunnels are a technology that was developed by Cisco but, is now an open standard through <a href="https://www.rfc-editor.org/rfc/rfc2784">RFC 2784</a>.
 GRE tunnels can provide use with a lot of versatility when needing to move different protocols between networks. Though we have now moved into an era that is predominantly TCP/IP, when GRE was developed it was at a time of multiple network technologies, IPX, Appletalk, Token Ring, etc, flourished. GRE provided the ability to encapsulate these technologies and let them traverse an Internet Protocol network.</p>
 <p>Though we no longer live with those antiquated technologies, it doesn&rsquo;t mean that GRE has lost its usefulness. We have seen the last IPv4 addresses issued, and though we&rsquo;ve heard the warning, &ldquo;IPv6 is just around the corner&rdquo; for over two decades, I do feel we might be finally seeing it arrive(and that&rsquo;s a good thing). During the migration to IPv6 we&rsquo;ll see situations where we have discontiguous networks. Where islands of IPv6 networks are connected by IPv4 networks. This is where GRE tunnels can help. GRE has the ability to encapsulate the IPv6 traffic and transport it over the IPv4 network.</p>
-<p>One consideration that has to be taken into account when using GRE, is that alone, it doesn&rsquo;t have any secuirty. All traffic is sent in the clear. We can add IPsec to provide security to our traffic, but in this example we&rsquo;ll just be implementing a simple GRE tunnel.</p>
+<p>One consideration that has to be taken into account when using GRE, is that alone, it doesn&rsquo;t have any security. All traffic is sent in the clear. We can add IPsec to provide security to our traffic, but in this example we&rsquo;ll just be implementing a simple GRE tunnel.</p>
 <p>The following example will show the interoperability of GRE between a Cisco router and an Oracle Linux box functioning as a router.</p>
 <h2 id="topology">Topology</h2>
 <p><img src="topology.png" alt="Topology"></p>
