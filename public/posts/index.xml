@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Cable Kitten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cablekitten.co.uk/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Single Area OSPF Deployment on Linux</title>
+      <link>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</guid>
+      <description>Though Linux is usually thought of as a server OS. It has huge amount of other implementations from embedded systems, the world of IOT, the mobile phone sector, and we&amp;rsquo;re all still waiting for the year of the Linux Desktop(sure it&amp;rsquo;ll be this year). But a function that is often over looked is the available routing protocol suite that eanbles linux to function as a router.&#xA;The routing protocol suite started off as a project called Zebra, which after becoming discontinued morphed into Quagga Routing Software.</description>
+    </item>
     <item>
       <title>GRE Tunneling Between Cisco and Linux</title>
       <link>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</link>

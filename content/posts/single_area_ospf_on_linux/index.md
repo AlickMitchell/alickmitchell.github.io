@@ -34,7 +34,7 @@ We have two methods for configuring the device.
 
 
 #### Setting the Hostname ####
-Though we have a hostname command under the FRR interactive shell, this sets the hostname only for this session, it will revert to "frr" after a reboot. So we need to set the hostname in the /etc/hostname file.
+Though we have a hostname command under the FRR interactive shell, this sets the hostname only for this session, it doesn't update the /etc/hostname after a reboot. So we need to set the hostname in the /etc/hostname file.
 
 ```
 FRR-1# echo "FRR-1" > /etc/hostname
@@ -65,7 +65,7 @@ To enable instances, we need to edit the /etc/frr/deamons.
 ospfd=yes
 ospfd_instances=1,5,6
 ```
-- I found that just restarting the frr process, didn't enable the processes in the vtysh though they showed running on the system, and I had to reboot the device.
+- I found that just restarting the frr process, didn't enable the instances in the vtysh though they showed running on the system, and I had to reboot the device.
 
 We'll now set the router-id for the device.
 ```
@@ -78,7 +78,7 @@ FRR-1# conf t
 FRR-1(config)# router ospf 1
 FRR-1(config-router)# ospf router-id 1.1.1.1
 ```
-- If we don't set the router-id, then the default that we see in Cisco is used; where the highest loopback address is used, and if no loopback, then the highest interface address.
+- If we don't set the router-id, then the default that we see in Cisco is used; where the highest loopback address is used first, and if no loopback, then the highest interface address.
 
 A caveat to using instances with FRR is that the network command under the process isn't available, and we have to configure OSPF under the interface.
 ```
@@ -146,7 +146,7 @@ Link ID         ADV Router      Age  Seq#       CkSum  Link count
 ```
 - As we can see, we have received Type 1 LSAs from all the routers in the area.
 
-- Verify that we have all the networks present in the routing table.
+Verify that we have all the networks present in the routing table.
 ```
 FRR-1# sh ip route
 Codes: K - kernel route, C - connected, S - static, R - RIP,

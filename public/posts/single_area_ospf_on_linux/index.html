@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Single Area OSPF Deployment on Linux | Cable Kitten</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This post walks through the setting up of a single OSPF area on Linux">
+    <meta name="generator" content="Hugo 0.122.0">
+    
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.583db2df44f25197f10178d930866e6f2e92f79c5bc910541d9e3a652fd39bb1.css" >
+
+
+
+    
+
+    
+      
+<link rel="shortcut icon" href="/favicon-16x16.png" type="image/x-icon" />
+
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://cablekitten.co.uk/posts/single_area_ospf_on_linux/">
+    
+
+    <meta property="og:title" content="Single Area OSPF Deployment on Linux" />
+<meta property="og:description" content="This post walks through the setting up of a single OSPF area on Linux" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cablekitten.co.uk/posts/single_area_ospf_on_linux/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-31T00:00:00+00:00" />
+
+<meta itemprop="name" content="Single Area OSPF Deployment on Linux">
+<meta itemprop="description" content="This post walks through the setting up of a single OSPF area on Linux"><meta itemprop="datePublished" content="2024-01-31T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-01-31T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1123">
+<meta itemprop="keywords" content="Linux,Routing,OSPF," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Single Area OSPF Deployment on Linux"/>
+<meta name="twitter:description" content="This post walks through the setting up of a single OSPF area on Linux"/>
+
+      
+    
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-navy">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Cable Kitten
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/abouts/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/AlickMitchell/" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://twitter.com/intent/tweet?url=https://cablekitten.co.uk/posts/single_area_ospf_on_linux/&amp;text=Single%20Area%20OSPF%20Deployment%20on%20Linux" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Single Area OSPF Deployment on Linux</h1>
+      
+      <p class="tracked">
+        By <strong>Alick</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-01-31T00:00:00Z">January 31, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Though Linux is usually thought of as a server OS. It has huge amount of other implementations from embedded systems, the world of IOT, the mobile phone sector, and we&rsquo;re all still waiting for the year of the Linux Desktop(sure it&rsquo;ll be this year). But a function that is often over looked is the available routing protocol suite that eanbles linux to function as a router.</p>
+<p>The routing protocol suite started off as a project called Zebra, which after becoming discontinued morphed into <a href="https://github.com/Quagga">Quagga Routing Software</a>. We&rsquo;ll be using <a href="https://frrouting.org/">FRRouting</a>, which is a project that has been forked from Qugga, and is under active development.</p>
+<p>FRR provides use with the ability to work with many dynamic routing protocols:</p>
+<ul>
+<li>OSPFv2/OSPFv3</li>
+<li>BGP</li>
+<li>RIP/RIPng</li>
+<li>ISIS</li>
+</ul>
+<p>Is this example, we&rsquo;re going to create a single OSPFv2 area with FRR installed on Alpine Linux.</p>
+<h2 id="topology">Topology</h2>
+<p><img src="topology.png" alt="Topology"></p>
+<h3 id="configuration-of-frr-1">Configuration of FRR-1</h3>
+<p>I&rsquo;ll walk through the configuration of FRR-1. The configuration will be the same on the other devices, with just the addressing needing to changed for the device.</p>
+<p>We have two methods for configuring the device.</p>
+<ul>
+<li>Configuration file /etc/frr/frr.conf - This file can be thought of as the Cisco config file, but unlike the Cisco config file we can interact with this in a text editor to create the configuration.</li>
+<li>Vtysh - This is the interactive shell. Has the feel of the Cisco command line. The commands that you set through the vtysh are written to /etc/frr/frr.conf.</li>
+</ul>
+<h4 id="setting-the-hostname">Setting the Hostname</h4>
+<p>Though we have a hostname command under the FRR interactive shell, this sets the hostname only for this session, it doesn&rsquo;t update the /etc/hostname after a reboot. So we need to set the hostname in the /etc/hostname file.</p>
+<pre tabindex="0"><code>FRR-1# echo &#34;FRR-1&#34; &gt; /etc/hostname
+FRR-1:~# cat /etc/hostname 
+FRR-1
+</code></pre><h4 id="ip-addressing">IP Addressing</h4>
+<p>With the hostname set, we can now move back into the interactive shell and set the ip address details.</p>
+<pre tabindex="0"><code>FRR-1:~# vtysh
+
+Hello, this is FRRouting (version 8.1).
+Copyright 1996-2005 Kunihiro Ishiguro, et al.
+
+FRR-1# conf t
+FRR-1(config)# interface eth1
+FRR-1(config-if)# ip address 10.10.10.1/30
+FRR-1(config-if)# 
+</code></pre><h4 id="ospf-configuration">OSPF Configuration</h4>
+<p>If we only require a single instance of OSPF we can continue with the configuration, just omit the instance id. I&rsquo;m going to continue by setting up 3 instances, just to show the process, even though we only require one for this example.</p>
+<p>To enable instances, we need to edit the /etc/frr/deamons.</p>
+<pre tabindex="0"><code>ospfd=yes
+ospfd_instances=1,5,6
+</code></pre><ul>
+<li>I found that just restarting the frr process, didn&rsquo;t enable the instances in the vtysh though they showed running on the system, and I had to reboot the device.</li>
+</ul>
+<p>We&rsquo;ll now set the router-id for the device.</p>
+<pre tabindex="0"><code>FRR-1:~# vtysh 
+
+Hello, this is FRRouting (version 8.1).
+Copyright 1996-2005 Kunihiro Ishiguro, et al.
+
+FRR-1# conf t
+FRR-1(config)# router ospf 1
+FRR-1(config-router)# ospf router-id 1.1.1.1
+</code></pre><ul>
+<li>If we don&rsquo;t set the router-id, then the default that we see in Cisco is used; where the highest loopback address is used first, and if no loopback, then the highest interface address.</li>
+</ul>
+<p>A caveat to using instances with FRR is that the network command under the process isn&rsquo;t available, and we have to configure OSPF under the interface.</p>
+<pre tabindex="0"><code>FRR-1(config-router)# network 10.10.10.0/30 area 1
+The network command is not supported in multi-instance ospf
+FRR-1(config-router)# int eth1
+FRR-1(config-if)# ip ospf 1 area 1
+</code></pre><p>We can now verify that ospf has been setup to advertise the 10.10.10.0/30 network.</p>
+<pre tabindex="0"><code>FRR-1# sh ip ospf 1 interface
+
+OSPF Instance: 1
+
+eth1 is up
+  ifindex 3, MTU 1500 bytes, BW 1000 Mbit &lt;UP,BROADCAST,RUNNING,MULTICAST&gt;
+  Internet Address 10.10.10.1/30, Broadcast 10.10.10.3, Area 0.0.0.1
+  MTU mismatch detection: enabled
+  Router ID 1.1.1.1, Network Type BROADCAST, Cost: 100
+  Transmit Delay is 1 sec, State DROther, Priority 1
+  Designated Router (ID) 10.10.10.2 Interface Address 10.10.10.2/30
+  Backup Designated Router (ID) 10.10.10.2, Interface Address 10.10.10.2
+  Multicast group memberships: OSPFAllRouters
+  Timer intervals configured, Hello 10s, Dead 40s, Wait 40s, Retransmit 5
+    Hello due in 7.467s
+  Neighbor Count is 1, Adjacent neighbor count is 1
+</code></pre><ul>
+<li>As we haven&rsquo;t set the network type it defaults to Broadcast, as the media type is Ethernet.</li>
+</ul>
+<p>We&rsquo;ll set the interface to point-to-point as we are on a /30 network.</p>
+<pre tabindex="0"><code>FRR-1# conf t
+FRR-1(config)# int eth1
+FRR-1(config-if)# ip ospf network point-to-point 
+FRR-1(config-if)# end
+FRR-1# sh ip ospf 1 int | include Type
+  Router ID 1.1.1.1, Network Type POINTOPOINT, Cost: 100
+</code></pre><p>We now can complete the IP addressing and OSPF configuration on the other routers, using the above instructions, just adjusting for the IP address and the network information.</p>
+<h4 id="verification-of-the-ospf-configuration">Verification of the OSPF Configuration</h4>
+<p>With all the routers now configured with IP addressing and OSPF activated for the required networks, we can confirm that we are seeing all routers in the OSPF database.</p>
+<pre tabindex="0"><code>FRR-1# sh ip ospf 1 database 
+
+OSPF Instance: 1
+
+
+       OSPF Router with ID (1.1.1.1)
+
+                Router Link States (Area 0.0.0.1)
+
+Link ID         ADV Router      Age  Seq#       CkSum  Link count
+1.1.1.1        1.1.1.1            7 0x80000014 0xaa68 2
+2.2.2.2        2.2.2.2           41 0x8000000f 0xf80f 2
+3.3.3.3        3.3.3.3           41 0x8000000f 0x3dba 2
+4.4.4.4        4.4.4.4           41 0x8000000e 0x8365 2
+5.5.5.5        5.5.5.5           13 0x80000014 0x2f18 8
+</code></pre><ul>
+<li>As we can see, we have received Type 1 LSAs from all the routers in the area.</li>
+</ul>
+<p>Verify that we have all the networks present in the routing table.</p>
+<pre tabindex="0"><code>FRR-1# sh ip route
+Codes: K - kernel route, C - connected, S - static, R - RIP,
+       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,
+       f - OpenFabric,
+       &gt; - selected route, * - FIB route, q - queued, r - rejected, b - backup
+       t - trapped, o - offload failure
+
+O[1]   10.10.10.0/30 [110/100] is directly connected, eth1, weight 1, 00:29:59
+C&gt;* 10.10.10.0/30 is directly connected, eth1, 00:29:59
+O[1]&gt;* 10.10.10.4/30 [110/200] via 10.10.10.2, eth1, weight 1, 00:29:52
+O[1]&gt;* 10.10.10.8/30 [110/200] via 10.10.10.2, eth1, weight 1, 00:29:52
+O[1]&gt;* 10.10.10.12/30 [110/200] via 10.10.10.2, eth1, weight 1, 00:29:52
+</code></pre><ul>
+<li>Here we see that FRR uses a similar layout to the Cisco show command for the routing table.</li>
+<li>But also uses the same BGP table symbols of &lsquo;&gt;&rsquo; and &lsquo;*&rsquo; to indicate the best route.</li>
+<li>We see that both routes are present for 10.10.10.0/30, but that the connected route has been selected as the better route.</li>
+<li>If we replace &ldquo;route&rdquo; with &ldquo;fib&rdquo;, you&rsquo;d only see the best routes printed.</li>
+</ul>
+<h3 id="take-away-from-working-with-frr">Take away from working with FRR</h3>
+<p>If you are familiar with the Cisco command line, you&rsquo;ll find the vtysh(FRR interactive shell) very easy to navigate. The features that are available through FRR are impressive. The documentation is really well put together and can be found <a href="https://docs.frrouting.org/en/latest/index.html">here</a>. One worry with open source projects is continued development, FRR seems like it has a strong team behind it and is updated regularly. At the date of this post there were updates to the git repo 3 days prior.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/routing/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Routing</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ospf/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">OSPF</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/linux_static_route/">Linux Static Route</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/gre_tunnel_between_cisco_and_linux/">GRE Tunneling Between Cisco and Linux</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/link_redundancy_with_administrative_distance/">Link Redundancy with Administrative Distance</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/lfcs_journey/">My LFCS Journey</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-navy bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://cablekitten.co.uk/" >
+    &copy;  Cable Kitten 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://twitter.com/AlickMitchell/" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
