@@ -7,16 +7,16 @@
     <title>Single Area OSPF Deployment on Linux | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="This post walks through the setting up of a single OSPF area on Linux">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.124.1">
     
     
     
     
-      <meta name="robots" content="index, follow">
+      <meta name="robots" content="noindex, nofollow">
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.583db2df44f25197f10178d930866e6f2e92f79c5bc910541d9e3a652fd39bb1.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
 
 
 
@@ -41,7 +41,6 @@
 <meta property="og:url" content="https://cablekitten.co.uk/posts/single_area_ospf_on_linux/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2024-01-31T00:00:00+00:00" />
-
 <meta itemprop="name" content="Single Area OSPF Deployment on Linux">
 <meta itemprop="description" content="This post walks through the setting up of a single OSPF area on Linux"><meta itemprop="datePublished" content="2024-01-31T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-01-31T00:00:00+00:00" />
@@ -49,12 +48,10 @@
 <meta itemprop="keywords" content="Linux,Routing,OSPF," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Single Area OSPF Deployment on Linux"/>
 <meta name="twitter:description" content="This post walks through the setting up of a single OSPF area on Linux"/>
 
-      
-    
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white production">
+  <body class="ma0 avenir bg-near-white">
 
     
    
@@ -172,7 +169,7 @@
 </ul>
 <p>Is this example, we&rsquo;re going to create a single OSPFv2 area with FRR installed on Alpine Linux.</p>
 <h2 id="topology">Topology</h2>
-<p><img src="topology.png" alt="Topology"></p>
+<p><img alt="Topology" src="/posts/single_area_ospf_on_linux/topology.png"></p>
 <h3 id="configuration-of-frr-1">Configuration of FRR-1</h3>
 <p>I&rsquo;ll walk through the configuration of FRR-1. The configuration will be the same on the other devices, with just the addressing needing to changed for the device.</p>
 <p>We have two methods for configuring the device.</p>

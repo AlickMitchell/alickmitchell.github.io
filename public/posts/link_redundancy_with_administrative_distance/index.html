@@ -7,16 +7,16 @@
     <title>Link Redundancy with Administrative Distance | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="This post discusses Administrative Distance for link redundancy on Cisco routers">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.124.1">
     
     
     
     
-      <meta name="robots" content="index, follow">
+      <meta name="robots" content="noindex, nofollow">
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.583db2df44f25197f10178d930866e6f2e92f79c5bc910541d9e3a652fd39bb1.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
 
 
 
@@ -41,7 +41,6 @@
 <meta property="og:url" content="https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-17T00:00:00+00:00" />
 <meta property="article:modified_time" content="2024-01-17T00:00:00+00:00" />
-
 <meta itemprop="name" content="Link Redundancy with Administrative Distance">
 <meta itemprop="description" content="This post discusses Administrative Distance for link redundancy on Cisco routers"><meta itemprop="datePublished" content="2024-01-17T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2024-01-17T00:00:00+00:00" />
@@ -49,12 +48,10 @@
 <meta itemprop="keywords" content="Cisco,Routing," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Link Redundancy with Administrative Distance"/>
 <meta name="twitter:description" content="This post discusses Administrative Distance for link redundancy on Cisco routers"/>
 
-      
-    
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white production">
+  <body class="ma0 avenir bg-near-white">
 
     
    
@@ -200,7 +197,7 @@
 <p>This functionality can be used by us to implement redundancy. If we have a Primary circuit and a Backup circuit we can set the Backup with a higher AD and if the Primary ever fails, the Backup will be inserted into the routing table.</p>
 <p>In the following example I&rsquo;ll show how the routing table is influenced by different AD values. We&rsquo;ll have one default static route(Site-A - R1), one static route with a modified AD of 10(Site-A - R2), and one OSPF advertisement(Site-A - R3 - Site-B). We&rsquo;ll drop connections and see how routes are added to the routing table.</p>
 <h3 id="topology">Topology</h3>
-<p><img src="topology.png" alt="Topology"></p>
+<p><img alt="Topology" src="/posts/link_redundancy_with_administrative_distance/topology.png"></p>
 <ul>
 <li>Site-A static routes</li>
 </ul>
