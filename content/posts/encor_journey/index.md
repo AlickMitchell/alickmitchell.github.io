@@ -125,7 +125,7 @@ Create a study spreadsheet. I broke down the blueprint into a spreadsheet, and f
 
 * Notes
 
-Have a good note-taking system. I find noting taking whilst following more concept based training keeps my mind from wandering. 
+Have a good note-taking system. I find taking notes whilst following more concept based training keeps my mind from wandering. 
 
 I also find the process of working through my notes and editing them later solidifies the concepts. 
 
