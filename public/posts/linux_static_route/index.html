@@ -7,16 +7,16 @@
     <title>Linux Static Route | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="This post walks through the setting up of static routes on Linux">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.125.3">
     
     
     
     
-      <meta name="robots" content="index, follow">
+      <meta name="robots" content="noindex, nofollow">
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.583db2df44f25197f10178d930866e6f2e92f79c5bc910541d9e3a652fd39bb1.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
 
 
 
@@ -35,26 +35,29 @@
       <link rel="canonical" href="https://cablekitten.co.uk/posts/linux_static_route/">
     
 
-    <meta property="og:title" content="Linux Static Route" />
-<meta property="og:description" content="This post walks through the setting up of static routes on Linux" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cablekitten.co.uk/posts/linux_static_route/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-01-01T00:00:00+00:00" />
+    <meta property="og:url" content="https://cablekitten.co.uk/posts/linux_static_route/">
+  <meta property="og:site_name" content="Cable Kitten">
+  <meta property="og:title" content="Linux Static Route">
+  <meta property="og:description" content="This post walks through the setting up of static routes on Linux">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+  <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
 
-<meta itemprop="name" content="Linux Static Route">
-<meta itemprop="description" content="This post walks through the setting up of static routes on Linux"><meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="772">
-<meta itemprop="keywords" content="Linux," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Linux Static Route"/>
-<meta name="twitter:description" content="This post walks through the setting up of static routes on Linux"/>
+  <meta itemprop="name" content="Linux Static Route">
+  <meta itemprop="description" content="This post walks through the setting up of static routes on Linux">
+  <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+  <meta itemprop="wordCount" content="772">
+  <meta itemprop="keywords" content="Linux,Networking"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Linux Static Route">
+<meta name="twitter:description" content="This post walks through the setting up of static routes on Linux">
 
-      
-    
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white production">
+  <body class="ma0 avenir bg-near-white">
 
     
    
@@ -164,7 +167,7 @@
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Whilst recently recertifying for my LFCS the networking section had been further expanded and now included static routes. I thought this was fantastic. Though I know a lot of people use linux, I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.</p>
 <p>Static routes can come in handy for connecting environments with multiple networks. By using static routes, we can direct our traffic, and make sure the more efficient paths are being used.</p>
 <h3 id="the-lab-environment">The Lab Environment</h3>
-<p><img src="lsr_topology.png" alt="Linux Static Route Topology"></p>
+<p><img alt="Linux Static Route Topology" src="/posts/linux_static_route/lsr_topology.png"></p>
 <p>Currently any traffic to the 10.10.1.4/30 network will go out of enp7s0, but all other traffic will use the default gateway at 10.10.1.1</p>
 <pre tabindex="0"><code>[user@localhost ~]$ ip route show
 default via 10.10.1.1 dev enp1s0 proto static metric 100 
@@ -172,7 +175,7 @@ default via 10.10.1.1 dev enp1s0 proto static metric 100
 10.10.1.4/30 dev enp7s0 proto kernel scope link src 10.10.1.5 metric 101      
 </code></pre><p>When we attempt to ping Site-2, our pings will be sent to the default gateway as the routing table doesn&rsquo;t have an entry for the network.
 The Wireshark output below, shows the ping being sent to GW, but GW also doesn&rsquo;t have a route for Site-2.</p>
-<p><img src="ping_14_1.png" alt="Ping Site-2-1"></p>
+<p><img alt="Ping Site-2-1" src="/posts/linux_static_route/ping_14_1.png"></p>
 <p>So to easily remedy this, we can implement a static route on Site-1.</p>
 <h3 id="methods">Methods</h3>
 <p>We have two ways of implementing the static route:</p>
