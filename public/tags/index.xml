@@ -11,13 +11,18 @@
     <item>
       <title>Linux</title>
       <link>https://cablekitten.co.uk/tags/linux/</link>
+<<<<<<< HEAD
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+=======
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+>>>>>>> 98def10f6ef6bdfbc5ff81d2bbd95c3623a6dbc3
       <guid>https://cablekitten.co.uk/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>OSPF</title>
       <link>https://cablekitten.co.uk/tags/ospf/</link>
+<<<<<<< HEAD
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://cablekitten.co.uk/tags/ospf/</guid>
       <description></description>
@@ -44,6 +49,34 @@
       <description></description>
     </item>
     <item>
+=======
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/tags/ospf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Routing</title>
+      <link>https://cablekitten.co.uk/tags/routing/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/tags/routing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cisco</title>
+      <link>https://cablekitten.co.uk/tags/cisco/</link>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/tags/cisco/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tunneling</title>
+      <link>https://cablekitten.co.uk/tags/tunneling/</link>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://cablekitten.co.uk/tags/tunneling/</guid>
+      <description></description>
+    </item>
+    <item>
+>>>>>>> 98def10f6ef6bdfbc5ff81d2bbd95c3623a6dbc3
       <title>Automation</title>
       <link>https://cablekitten.co.uk/tags/automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
