@@ -7,11 +7,7 @@
     <title>Single Area OSPF Deployment on Linux | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="This post walks through the setting up of a single OSPF area on Linux">
-<<<<<<< HEAD
-    <meta name="generator" content="Hugo 0.125.3">
-=======
-    <meta name="generator" content="Hugo 0.124.1">
->>>>>>> 98def10f6ef6bdfbc5ff81d2bbd95c3623a6dbc3
+    <meta name="generator" content="Hugo 0.128.2">
     
     
     
@@ -39,14 +35,13 @@
       <link rel="canonical" href="https://cablekitten.co.uk/posts/single_area_ospf_on_linux/">
     
 
-<<<<<<< HEAD
     <meta property="og:url" content="https://cablekitten.co.uk/posts/single_area_ospf_on_linux/">
   <meta property="og:site_name" content="Cable Kitten">
   <meta property="og:title" content="Single Area OSPF Deployment on Linux">
   <meta property="og:description" content="This post walks through the setting up of a single OSPF area on Linux">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
-  <meta property="article:section" content="posts">
+    <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-01-31T00:00:00+00:00">
     <meta property="article:modified_time" content="2024-01-31T00:00:00+00:00">
     <meta property="article:tag" content="Linux">
@@ -57,23 +52,11 @@
   <meta itemprop="description" content="This post walks through the setting up of a single OSPF area on Linux">
   <meta itemprop="datePublished" content="2024-01-31T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-01-31T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1122">
-  <meta itemprop="keywords" content="Linux,Routing,OSPF,Networking,FRR"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Single Area OSPF Deployment on Linux">
-<meta name="twitter:description" content="This post walks through the setting up of a single OSPF area on Linux">
-=======
-    <meta property="og:title" content="Single Area OSPF Deployment on Linux" />
-<meta property="og:description" content="This post walks through the setting up of a single OSPF area on Linux" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://cablekitten.co.uk/posts/single_area_ospf_on_linux/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-31T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-01-31T00:00:00+00:00" />
-<meta itemprop="name" content="Single Area OSPF Deployment on Linux">
-<meta itemprop="description" content="This post walks through the setting up of a single OSPF area on Linux"><meta itemprop="datePublished" content="2024-01-31T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2024-01-31T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1123">
-<meta itemprop="keywords" content="Linux,Routing,OSPF," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Single Area OSPF Deployment on Linux"/>
-<meta name="twitter:description" content="This post walks through the setting up of a single OSPF area on Linux"/>
->>>>>>> 98def10f6ef6bdfbc5ff81d2bbd95c3623a6dbc3
+  <meta itemprop="wordCount" content="1123">
+  <meta itemprop="keywords" content="Linux,Routing,OSPF,Networking,FRR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Single Area OSPF Deployment on Linux">
+  <meta name="twitter:description" content="This post walks through the setting up of a single OSPF area on Linux">
 
 	
   </head>
@@ -205,11 +188,7 @@
 <li>Vtysh - This is the interactive shell. Has the feel of the Cisco command line. The commands that you set through the vtysh are written to /etc/frr/frr.conf.</li>
 </ul>
 <h4 id="setting-the-hostname">Setting the Hostname</h4>
-<<<<<<< HEAD
-<p>Though we have a hostname command under the FRR interactive shell, this sets the hostname only for this session, it will revert to &ldquo;frr&rdquo; after a reboot. So we need to set the hostname in the /etc/hostname file.</p>
-=======
 <p>Though we have a hostname command under the FRR interactive shell, this sets the hostname only for this session, it doesn&rsquo;t update the /etc/hostname after a reboot. So we need to set the hostname in the /etc/hostname file.</p>
->>>>>>> 98def10f6ef6bdfbc5ff81d2bbd95c3623a6dbc3
 <pre tabindex="0"><code>FRR-1# echo &#34;FRR-1&#34; &gt; /etc/hostname
 FRR-1:~# cat /etc/hostname 
 FRR-1
@@ -230,11 +209,7 @@ FRR-1(config-if)#
 <pre tabindex="0"><code>ospfd=yes
 ospfd_instances=1,5,6
 </code></pre><ul>
-<<<<<<< HEAD
-<li>I found that just restarting the frr process, didn&rsquo;t enable the processes in the vtysh though they showed running on the system, and I had to reboot the device.</li>
-=======
 <li>I found that just restarting the frr process, didn&rsquo;t enable the instances in the vtysh though they showed running on the system, and I had to reboot the device.</li>
->>>>>>> 98def10f6ef6bdfbc5ff81d2bbd95c3623a6dbc3
 </ul>
 <p>We&rsquo;ll now set the router-id for the device.</p>
 <pre tabindex="0"><code>FRR-1:~# vtysh 
@@ -246,11 +221,7 @@ FRR-1# conf t
 FRR-1(config)# router ospf 1
 FRR-1(config-router)# ospf router-id 1.1.1.1
 </code></pre><ul>
-<<<<<<< HEAD
-<li>If we don&rsquo;t set the router-id, then the default that we see in Cisco is used; where the highest loopback address is used, and if no loopback, then the highest interface address.</li>
-=======
 <li>If we don&rsquo;t set the router-id, then the default that we see in Cisco is used; where the highest loopback address is used first, and if no loopback, then the highest interface address.</li>
->>>>>>> 98def10f6ef6bdfbc5ff81d2bbd95c3623a6dbc3
 </ul>
 <p>A caveat to using instances with FRR is that the network command under the process isn&rsquo;t available, and we have to configure OSPF under the interface.</p>
 <pre tabindex="0"><code>FRR-1(config-router)# network 10.10.10.0/30 area 1
@@ -303,19 +274,9 @@ Link ID         ADV Router      Age  Seq#       CkSum  Link count
 4.4.4.4        4.4.4.4           41 0x8000000e 0x8365 2
 5.5.5.5        5.5.5.5           13 0x80000014 0x2f18 8
 </code></pre><ul>
-<<<<<<< HEAD
-<li>
-<p>As we can see, we have received Type 1 LSAs from all the routers in the area.</p>
-</li>
-<li>
-<p>Verify that we have all the networks present in the routing table.</p>
-</li>
-</ul>
-=======
 <li>As we can see, we have received Type 1 LSAs from all the routers in the area.</li>
 </ul>
 <p>Verify that we have all the networks present in the routing table.</p>
->>>>>>> 98def10f6ef6bdfbc5ff81d2bbd95c3623a6dbc3
 <pre tabindex="0"><code>FRR-1# sh ip route
 Codes: K - kernel route, C - connected, S - static, R - RIP,
        O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
