@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Cable Kitten</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>https://cablekitten.co.uk/tags/linux/</link>
     <description>Recent content in Linux on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 21 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cablekitten.co.uk/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Finding Files</title>
-      <link>http://localhost:1313/posts/finding_files/</link>
+      <title>Finding Files - Part One</title>
+      <link>https://cablekitten.co.uk/posts/finding_files_part_one/</link>
       <pubDate>Fri, 21 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/finding_files/</guid>
-      <description>When using Linux you&amp;rsquo;ll come to use a certain group of tools daily. Grep, sed, awk are up there, but also find. Find allows us to pin point a specific file by name, or by a certain charateristic. When we link this with regular expressions and the ability to perform actions on the found files, find becomes a powerful tool.</description>
+      <guid>https://cablekitten.co.uk/posts/finding_files_part_one/</guid>
+      <description>When using Linux you&amp;rsquo;ll come to use a certain group of tools daily. In your tool bag you&amp;rsquo;ll no doubt have a worn grep, a shiny sed, a beat up awk, and a collection of other well used tools. One of my personal favourites is find.&#xA;Find allows us to pinpoint a specific file by name, or by a certain characteristic. We can link these search options together to work with very granular patterns to match against.</description>
     </item>
     <item>
       <title>Single Area OSPF Deployment on Linux</title>
-      <link>http://localhost:1313/posts/single_area_ospf_on_linux/</link>
+      <link>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/single_area_ospf_on_linux/</guid>
+      <guid>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</guid>
       <description>Though Linux is usually thought of as a server OS. It has huge amount of other implementations from embedded systems, the world of IOT, the mobile phone sector, and we&amp;rsquo;re all still waiting for the year of the Linux Desktop(sure it&amp;rsquo;ll be this year). But a function that is often over looked is the available routing protocol suite that eanbles linux to function as a router.&#xA;The routing protocol suite started off as a project called Zebra, which after becoming discontinued morphed into Quagga Routing Software.</description>
     </item>
     <item>
       <title>GRE Tunneling Between Cisco and Linux</title>
-      <link>http://localhost:1313/posts/gre_tunnel_between_cisco_and_linux/</link>
+      <link>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</link>
       <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/gre_tunnel_between_cisco_and_linux/</guid>
+      <guid>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</guid>
       <description>Generic Routing Encapsulation(GRE) tunnels are a technology that was developed by Cisco but, is now an open standard through RFC 2784. GRE tunnels can provide use with a lot of versatility when needing to move different protocols between networks. Though we have now moved into an era that is predominantly TCP/IP, when GRE was developed it was at a time of multiple network technologies, IPX, Appletalk, Token Ring, etc, flourished. GRE provided the ability to encapsulate these technologies and let them traverse an Internet Protocol network.</description>
     </item>
     <item>
       <title>Linux Static Route</title>
-      <link>http://localhost:1313/posts/linux_static_route/</link>
+      <link>https://cablekitten.co.uk/posts/linux_static_route/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/linux_static_route/</guid>
+      <guid>https://cablekitten.co.uk/posts/linux_static_route/</guid>
       <description>Whilst recently recertifying for my LFCS the networking section had been further expanded and now included static routes. I thought this was fantastic. Though I know a lot of people use linux, I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.&#xA;Static routes can come in handy for connecting environments with multiple networks.</description>
     </item>
     <item>
       <title>My LFCS Journey</title>
-      <link>http://localhost:1313/posts/lfcs_journey/</link>
+      <link>https://cablekitten.co.uk/posts/lfcs_journey/</link>
       <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/lfcs_journey/</guid>
+      <guid>https://cablekitten.co.uk/posts/lfcs_journey/</guid>
       <description>I passed my Linux Foundation Certified Systems Administrator Exam a few weeks back. This was a recertification. Since I last took the exam the syllabus has been overhauled. Where previously you would choose between CentOS and Ubuntu, they have now gone for a vendor neutral approach.&#xA;I was hoping for the release of the new LFCE, but I fear that this is never coming. I did message the team a year ago and was told it was in development, but haven&amp;rsquo;t seen any update.</description>
     </item>
   </channel>
