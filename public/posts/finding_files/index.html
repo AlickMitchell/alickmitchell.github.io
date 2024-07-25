@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>EEM and a Downed Primary Circuit | Cable Kitten</title>
+    <title>Finding Files | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="This post will discuss the use of EEM for redundancy">
+    <meta name="description" content="This post explain the use of the linux find command">
     <meta name="generator" content="Hugo 0.129.0">
     
     
@@ -32,30 +32,29 @@
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/eem_and_a_downed_primary_circuit/">
+      <link rel="canonical" href="http://localhost:1313/posts/finding_files/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/eem_and_a_downed_primary_circuit/">
+    <meta property="og:url" content="http://localhost:1313/posts/finding_files/">
   <meta property="og:site_name" content="Cable Kitten">
-  <meta property="og:title" content="EEM and a Downed Primary Circuit">
-  <meta property="og:description" content="This post will discuss the use of EEM for redundancy">
+  <meta property="og:title" content="Finding Files">
+  <meta property="og:description" content="This post explain the use of the linux find command">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-01-11T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-11T00:00:00+00:00">
-    <meta property="article:tag" content="Cisco">
-    <meta property="article:tag" content="Automation">
+    <meta property="article:published_time" content="2024-06-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-06-21T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
 
-  <meta itemprop="name" content="EEM and a Downed Primary Circuit">
-  <meta itemprop="description" content="This post will discuss the use of EEM for redundancy">
-  <meta itemprop="datePublished" content="2024-01-11T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-01-11T00:00:00+00:00">
-  <meta itemprop="wordCount" content="607">
-  <meta itemprop="keywords" content="Cisco,EEM,Automation">
+  <meta itemprop="name" content="Finding Files">
+  <meta itemprop="description" content="This post explain the use of the linux find command">
+  <meta itemprop="datePublished" content="2024-06-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-06-21T00:00:00+00:00">
+  <meta itemprop="wordCount" content="401">
+  <meta itemprop="keywords" content="Linux">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="EEM and a Downed Primary Circuit">
-  <meta name="twitter:description" content="This post will discuss the use of EEM for redundancy">
+  <meta name="twitter:title" content="Finding Files">
+  <meta name="twitter:description" content="This post explain the use of the linux find command">
 
 	
   </head>
@@ -143,7 +142,7 @@
   <div id="sharing" class="mt3 ananke-socials">
     
       
-      <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/posts/eem_and_a_downed_primary_circuit/&amp;text=EEM%20and%20a%20Downed%20Primary%20Circuit" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+      <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/posts/finding_files/&amp;text=Finding%20Files" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
         
         <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
 </span>
@@ -153,7 +152,7 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">EEM and a Downed Primary Circuit</h1>
+      <h1 class="f1 athelas mt3 mb1">Finding Files</h1>
       
       <p class="tracked">
         By <strong>Alick</strong>
@@ -161,81 +160,70 @@
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2024-01-11T00:00:00Z">January 11, 2024</time>
+      <time class="f6 mv4 dib tracked" datetime="2024-06-21T00:00:00Z">June 21, 2024</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.</p>
-<p>I&rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active. So if we lose our Primary Connection, the interface connected to the Backup circuit needs to be brought up. This can be scripted with EEM, we&rsquo;ll also put recovery in there. So when the Primary circuit comes back we shut down our interface to the Backup circuit.</p>
-<h2 id="topology">Topology</h2>
-<p><img alt="Topology" src="/posts/eem_and_a_downed_primary_circuit/topology.png"></p>
-<h2 id="implementation">Implementation</h2>
-<p>So we&rsquo;ll be using EEM and also &lsquo;IP SLA&rsquo; to perform this.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>When using Linux you&rsquo;ll come to use a certain group of tools daily. Grep, sed, awk are often mentioned, but one I use regularly is find. Find allows us to pin point a specific file by name, or by a certain charateristic. When we link this with regular expressions and the ability to perform actions on the found files, find becomes a powerful tool.</p>
+<h3 id="looking-for-a-specific-named-file">Looking for a Specific Named File</h3>
+<p>One of the simplest uses of find is searching for files by name.</p>
+<pre tabindex="0"><code>user:/etc$ find /etc -name &#34;fstab&#34; 2&gt;/dev/null
+/etc/fstab
+</code></pre><p>Here we use the -name flag to specify the exact match we are looking for. This flag also allows us to use the wildcard character to glob for files.</p>
+<pre tabindex="0"><code>0:59:45 eurus:/etc$ find /etc -name &#34;sy*.conf&#34; 2&gt;/dev/null
+/etc/systemd/system.conf
+/etc/ufw/sysctl.conf
+/etc/sysctl.conf
+</code></pre><h3 id="limit-the-digging">Limit the Digging</h3>
+<p>Often when searching, we might only need to search the current directory. To keep the results more accurate we can set a depth flag.</p>
+<pre tabindex="0"><code>user:/etc$ find /etc -maxdepth 1 -name &#34;ma*&#34; 2&gt;/dev/null
+/etc/magic
+/etc/manpath.config
+/etc/mailcap
+</code></pre><p>This can be altered to how deep we want to drill into the filesystem, by sepcifying the number after the -maxdepth option.</p>
+<h3 id="wheres-that-directory">Where&rsquo;s that directory</h3>
+<p>Find also has the ability to search by type. Though normally we are looking for files, we can search for directories, symbolic links, pipes, etc</p>
+<pre tabindex="0"><code>user:/etc$ find / -type d -name &#34;apache2&#34; 2&gt;/dev/null  
+/etc/apache2
+</code></pre><p>As you&rsquo;ll notice we start linking options together to get the result we are after.</p>
+<h3 id="regular-expressions">Regular Expressions</h3>
+<p>One of the features that makes find awesome is it&rsquo;s ability to use regular expressions.</p>
+<pre tabindex="0"><code>eurus:/etc$ find -regextype help
+find: Unknown regular expression type ‘help’; valid types are ‘findutils-default’, ‘ed’, ‘emacs’, ‘gnu-awk’, ‘grep’, ‘posix-awk’, ‘awk’, ‘posix-basic’, ‘posix-egrep’, ‘egrep’, ‘posix-extended’, ‘posix-minimal-basic’, ‘sed’.
+</code></pre><p>Running the above command lets use know what type of regular expressions are supported. So we can change from &lsquo;findutils-default&rsquo; to a more familiar type.</p>
+<p>One thing that needs to be taken into account when using the -regex the pattern is matched on the absolute path not just the file name.</p>
+<pre tabindex="0"><code>user:/etc$ find /etc -maxdepth 1 -type d -regex &#34;\/etc\/sys.*&#34; 2&gt;/dev/null
+/etc/systemd
+/etc/sysctl.d
+/etc/sysstat
+</code></pre><p>If this part &ldquo;/etc/&rdquo; of the pattern isn&rsquo;t present no results will be returned.</p>
+<p>We have a few useful regular expressions that</p>
 <ul>
-<li>First we need to create our ip sla instance. This will instruct the device to check the connectivity of the Primary Circuit.</li>
-</ul>
-<pre tabindex="0"><code>ip sla 1
- icmp-echo 192.168.14.4 source-interface GigabitEthernet0/2
- frequency 5
-ip sla schedule 1 life forever start-time now
-</code></pre><ul>
-<li>To allow the EEM scripts to monitor the SLA instance we need to create a track object.</li>
-</ul>
-<pre tabindex="0"><code>track 1 ip sla 1 reachability
-</code></pre><ul>
-<li>Now we create the &lsquo;BACKUP&rsquo; EEM script that will watch the track object for a change to the &ldquo;down&rdquo; state, and will bring up our Backup interface and print a syslog message, indicating that the Primary Circuit has gone down.</li>
-</ul>
-<pre tabindex="0"><code>event manager applet BACKUP
- event track 1 state down
- action 100 cli command &#34;enable&#34;
- action 200 cli command &#34;conf t&#34;
- action 300 cli command &#34;int gi0/1&#34;
- action 400 cli command &#34;no shut&#34;
- action 500 syslog priority critical msg &#34;THE PRIMARY CIRCUIT IS DOWN. BRINGING UP BACKUP INTERFACE&#34;
-</code></pre><ul>
-<li>We also create a recovery script &lsquo;RECOVER&rsquo;, this will also be monitoring the track object we created. If the objects state changes from up to down, it will loop continually while returning &lsquo;false&rsquo;, using a ping as it&rsquo;s testing mechanism. If the the ping detects the Primary Circuit has recovered. The script will shutdown the backup interface and write a message to the syslog indicating recovery.</li>
-</ul>
-<pre tabindex="0"><code>event manager applet RECOVER
- event track 1 state up
- action 100 cli command &#34;enable&#34;
- action 110 set DONE &#34;0&#34;
- action 120 while $DONE ne 1
- action 130  wait 5
- action 140  cli command &#34;ping 192.168.14.4 so gi0/2&#34;
- action 150  regexp &#34;!!!&#34; &#34;$_cli_result&#34;
- action 160  if $_regexp_result eq &#34;1&#34;
- action 170   cli command &#34;enable&#34;
- action 181   cli command &#34;conf t&#34;
- action 192   cli command &#34;int gi0/1&#34;
- action 200   cli command &#34;shut&#34;
- action 210   cli command &#34;end&#34;
- action 220   set DONE &#34;1&#34;
- action 230  end
- action 240 end
- action 250 syslog priority notifications msg &#34;Primary Interface Restored&#34;
-</code></pre><ul>
 <li>
-<p>Both of these scripts will continue to run in the background and are implemented when the variables change. For a Linux guy it&rsquo;s kind of like a Cron job, constantly running in the background watching for the state change of set variables.</p>
-</li>
+<ul>
 <li>
-<p>For the Backup link to be become the new default route, we&rsquo;d have to set a static route with higher administrative number than the primary link. So when the Primary circuit drops and it&rsquo;s removed from the routing table, the the Backup route would be inserted.</p>
+<ul>
+<li>Where are we use this for globing with the -name option, here we use it to represent 0 or above number of characters</li>
+</ul>
 </li>
 </ul>
-<pre tabindex="0"><code>ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/2 192.168.14.4
-ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/1 192.168.13.3 20
-</code></pre><ul>
-<li>This shows the power of EEM. With just a few lines of code we are able to add reliability to our network even when certain constraints are applied. A good reference for both EEM and TCL is the <a href="https://www.ciscopress.com/store/tcl-scripting-for-cisco-ios-9780133433739">TcL Scripting for Cisco IOS - Cisco Press</a>.</li>
+</li>
+<li>
+<ul>
+<li>
+<ul>
+<li>This represents 1 or greater number of pattern</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul class="pa0">
   
    <li class="list di">
-     <a href="/tags/cisco/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Cisco</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/automation/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Automation</a>
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
    </li>
   
 </ul>
@@ -255,7 +243,19 @@ ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/1 192.168.13.3 20
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/posts/encor_journey/">My Cisco ENCOR Journey</a>
+          <a href="/posts/single_area_ospf_on_linux/">Single Area OSPF Deployment on Linux</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/gre_tunnel_between_cisco_and_linux/">GRE Tunneling Between Cisco and Linux</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/linux_static_route/">Linux Static Route</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/lfcs_journey/">My LFCS Journey</a>
         </li>
 	    
     </ul>
