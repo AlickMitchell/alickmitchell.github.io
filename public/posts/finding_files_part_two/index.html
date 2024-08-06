@@ -7,7 +7,7 @@
     <title>Finding Files - Part Two | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="This post explain the use of the linux find command">
-    <meta name="generator" content="Hugo 0.129.0">
+    <meta name="generator" content="Hugo 0.131.0">
     
     
     
@@ -42,11 +42,15 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-07-01T00:00:00+00:00">
     <meta property="article:tag" content="Linux">
 
   <meta itemprop="name" content="Finding Files - Part Two">
   <meta itemprop="description" content="This post explain the use of the linux find command">
-  <meta itemprop="wordCount" content="206">
+  <meta itemprop="datePublished" content="2024-07-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-07-01T00:00:00+00:00">
+  <meta itemprop="wordCount" content="685">
   <meta itemprop="keywords" content="Linux">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Finding Files - Part Two">
@@ -156,22 +160,42 @@
       
       
       
+      <time class="f6 mv4 dib tracked" datetime="2024-07-01T00:00:00Z">July 1, 2024</time>
+      
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h3 id="regular-expressions">Regular Expressions</h3>
-<p>One of the features that makes find awesome is it&rsquo;s ability to use regular expressions.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>In part one I gave an overview of the more fundamental features of find. Here, I&rsquo;ll go over how we can incorporate regular expressions.</p>
+<p>Regular expressions are one of those skills that you&rsquo;ll end up using throughout of your career, from using in a bash script, BGP route manipulation or filtering, or a simple grep.</p>
+<p>One of the features that makes find awesome is its ability to incorporate regular expressions, to create granular search patterns.</p>
+<h3 id="which-regular-expressions">Which Regular Expressions</h3>
+<p>Though all implementations of regular expressions have commonalities, some are more feature rich than others. Find allows us to use different types of regex.</p>
 <pre tabindex="0"><code>eurus:/etc$ find -regextype help
 find: Unknown regular expression type ‘help’; valid types are ‘findutils-default’, ‘ed’, ‘emacs’, ‘gnu-awk’, ‘grep’, ‘posix-awk’, ‘awk’, ‘posix-basic’, ‘posix-egrep’, ‘egrep’, ‘posix-extended’, ‘posix-minimal-basic’, ‘sed’.
 </code></pre><p>Running the above command lets use know what type of regular expressions are supported. So we can change from &lsquo;findutils-default&rsquo; to a more familiar type.</p>
-<p>One thing that needs to be taken into account when using the -regex the pattern is matched on the absolute path not just the file name.</p>
+<p>This needs to be kept in mind, as you might find that your pattern though correct in one type of implementation, but doesn&rsquo;t work in the one set.</p>
+<pre tabindex="0"><code>user:/etc$ find /etc -maxdepth 1 -type f -regex &#34;\/etc\/f.*[conf]{4}&#34;
+user:/etc$ find /etc -maxdepth 1 -type f -regextype awk -regex &#34;\/etc\/f.*[conf]{4}&#34;
+user:/etc$ find /etc -maxdepth 1 -type f -regextype posix-extended -regex &#34;\/etc\/f.*[conf]{4}&#34;
+/etc/fuse.conf
+/etc/fprintd.conf
+user:/etc$ find /etc -maxdepth 1 -type f -regextype egrep -regex &#34;\/etc\/f.*[conf]{4}&#34;
+/etc/fuse.conf
+/etc/fprintd.conf
+</code></pre><p>Above we can see that &ldquo;findutils-default&rdquo; and &ldquo;awk&rdquo; fail to match on the pattern, but if we switch to &ldquo;posix-extended&rdquo; or &ldquo;egrep&rdquo; the pattern returns the expected files.</p>
+<h3 id="building-a-pattern">Building a Pattern</h3>
+<p>One thing that needs to be taken into account when using the -regex flag, the pattern is matched on the absolute path, not just the file name.</p>
 <pre tabindex="0"><code>user:/etc$ find /etc -maxdepth 1 -type d -regex &#34;\/etc\/sys.*&#34; 2&gt;/dev/null
 /etc/systemd
 /etc/sysctl.d
 /etc/sysstat
-</code></pre><p>If this part &ldquo;/etc/&rdquo; of the pattern isn&rsquo;t present no results will be returned.</p>
-<p>We have a few useful regular expressions to help use create patterns:</p>
+user:/etc$ find /etc -maxdepth 1 -type d -regex &#34;.*\/sys.*&#34; 2&gt;/dev/null
+/etc/sysctl.d
+/etc/sysstat
+/etc/systemd
+</code></pre><p>If this part &ldquo;/etc/&rdquo; of the pattern or the wild card &ldquo;.*&rdquo; isn&rsquo;t present above, no results will be returned.</p>
+<p>We have a few useful regular expressions to help use quantify sections of our patterns:</p>
 <table>
 <thead>
 <tr>
@@ -192,10 +216,56 @@ find: Unknown regular expression type ‘help’; valid types are ‘findutils-d
 <td style="text-align:left">?</td>
 <td style="text-align:left">Represents 1 or 0 characters</td>
 </tr>
+<tr>
+<td style="text-align:left">{n}</td>
+<td style="text-align:left">This sets the pattern to a certain number</td>
+</tr>
+<tr>
+<td style="text-align:left">{n,}</td>
+<td style="text-align:left">This sets the pattern to a minimum number</td>
+</tr>
+<tr>
+<td style="text-align:left">{,n}</td>
+<td style="text-align:left">This sets the pattern to a maximum number</td>
+</tr>
+<tr>
+<td style="text-align:left">{n,p}</td>
+<td style="text-align:left">This sets the pattern to a range</td>
+</tr>
 </tbody>
 </table>
-<h3 id="working-on-the-found-files">Working on the found files</h3>
-<p>Once we have found the files that we were looking for we can run into problems using pipes to try and and work with them. This problem is resolved with the -exec flag that will allow us to take action on each found item.</p>
+<p>We have an object called a Character Class, and  this allows us to set a range of characters. We use the square brackets to contain the range [].</p>
+<pre tabindex="0"><code>user:/tmp/test$ ls
+client.cnf  client.conf  client.config script.pl  vimrc
+user:/tmp/test$ find ./ -maxdepth 1 -type f -regextype egrep -regex &#34;.*/.*\.[config]{4,}&#34;
+./client.config
+./client.conf
+user:/tmp/test$ find ./ -maxdepth 1 -type f -regextype egrep -regex &#34;.*/.*\.[config]{4}&#34;
+./client.conf
+user:/tmp/test$ find ./ -maxdepth 1 -type f -regextype egrep -regex &#34;.*/.*\.[config]{,4}&#34;
+./client.cnf
+./client.conf
+</code></pre><p>Above, we have used a Character Class and a quantifier to change our search pattern.</p>
+<h4 id="metacharacters">Metacharacters</h4>
+<p>The fullstop &ldquo;.&rdquo; represents any character. Below we&rsquo;ll link it with a quantifier and ends with a &ldquo;c&rdquo;.</p>
+<pre tabindex="0"><code>user:/tmp/test$ ls
+client.cnf  client.conf  client.config  script.pl  vimrc
+user:/tmp/test$ find ./ -maxdepth 1 -type f -regextype egrep -regex &#34;\./(.){4}c&#34;
+./vimrc
+</code></pre><p>We can also use logic within our pattern. By using grouping with brackets and using the pipe as the or logical operator. Below, we are looking for files that end in .pl or .conf</p>
+<pre tabindex="0"><code>user:/tmp/test$ ls
+client.cnf  client.conf  client.config  script.pl  vimrc
+user:/tmp/test$ find ./ -maxdepth 1 -type f -regextype egrep -regex &#34;.*/.*\.(pl|conf)&#34;
+./script.pl
+./client.conf
+</code></pre><p>We can also negate characters by using the Character Class with the carrot. Below, we&rsquo;ll search from all files that start with any character other than &ldquo;c&rdquo;.</p>
+<pre tabindex="0"><code>user:/tmp/test$ ls
+client.cnf  client.conf  client.config script.pl  vimrc
+users:/tmp/test$ find ./ -maxdepth 1 -type f -regextype egrep -regex &#34;\./[^c].*&#34;
+./script.pl
+./vimrc
+</code></pre><h3 id="wrap-up">Wrap Up</h3>
+<p>As you can see, by using regular expressions with find, it allows us to search our filesystem at an extremely granular level. If you haven&rsquo;t already learnt regular expressions, I&rsquo;d highly recommend that you do. You&rsquo;ll come across them in many areas from DevOps, Network, Programming, too many areas to list.</p>
 <ul class="pa0">
   
    <li class="list di">

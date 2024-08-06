@@ -98,6 +98,17 @@ user:~$ find /usr/bin -type f -perm -4000 2>/dev/null
 /usr/bin/newgrp
 ```
 
+### Working on the find ###
+We are also given the ability to apply a command to the found item. This is done with the "-exec" flag. This is extremely handy, so we don't have to do any bashfu to have the found files collected and then piped into the command.
+```
+user:/tmp/test$ ls
+client.cnf  client.conf  client.config  conf  script.pl  server.conf  vimrc
+user:/tmp/test$ find . -name "*.conf" -exec mv {} ./conf \;
+user:/tmp/test$ ls ./conf
+client.conf  server.conf
+```
+Above we search for the ".conf" files in the directory, and then move them to the "conf" directory in the current working directory.
+
 ### Wrap up ###
 As you can see from the few examples that I have show above, find is very flexible and can be a useful tool that is fantastic to keep in your toolbag. In the next post I'll discuss how to use regular expressions can be used in conjunction with find to create patterns even more granular.
 

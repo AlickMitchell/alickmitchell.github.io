@@ -6,8 +6,15 @@
     <description>Recent content on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 21 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding Files - Part Two</title>
+      <link>http://localhost:1313/posts/finding_files_part_two/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/finding_files_part_two/</guid>
+      <description>In part one I gave an overview of the more fundamental features of find. Here, I&amp;rsquo;ll go over how we can incorporate regular expressions.&#xA;Regular expressions are one of those skills that you&amp;rsquo;ll end up using throughout of your career, from using in a bash script, BGP route manipulation or filtering, or a simple grep.&#xA;One of the features that makes find awesome is its ability to incorporate regular expressions, to create granular search patterns.</description>
+    </item>
     <item>
       <title>Finding Files - Part One</title>
       <link>http://localhost:1313/posts/finding_files_part_one/</link>
@@ -70,13 +77,6 @@
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/encor_journey/</guid>
       <description>I passed my Cisco ENCOR exam just over a month ago. I took it on the last day of V1.0. Thought I&amp;rsquo;d give an overview of the resources I used and how I found things. Obviously the Exam has now changed, so other resources maybe required.&#xA;Resources Core Books I would read every morning as soon as I woke. This way I guaranteed that I covered something everyday regardless of what got in the way.</description>
-    </item>
-    <item>
-      <title>Finding Files - Part Two</title>
-      <link>http://localhost:1313/posts/finding_files_part_two/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/finding_files_part_two/</guid>
-      <description>Regular Expressions One of the features that makes find awesome is it&amp;rsquo;s ability to use regular expressions.&#xA;eurus:/etc$ find -regextype help find: Unknown regular expression type ‘help’; valid types are ‘findutils-default’, ‘ed’, ‘emacs’, ‘gnu-awk’, ‘grep’, ‘posix-awk’, ‘awk’, ‘posix-basic’, ‘posix-egrep’, ‘egrep’, ‘posix-extended’, ‘posix-minimal-basic’, ‘sed’. Running the above command lets use know what type of regular expressions are supported. So we can change from &amp;lsquo;findutils-default&amp;rsquo; to a more familiar type.&#xA;One thing that needs to be taken into account when using the -regex the pattern is matched on the absolute path not just the file name.</description>
     </item>
   </channel>
 </rss>

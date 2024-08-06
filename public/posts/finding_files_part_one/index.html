@@ -7,7 +7,7 @@
     <title>Finding Files - Part One | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="This post explain the use of the linux find command">
-    <meta name="generator" content="Hugo 0.129.0">
+    <meta name="generator" content="Hugo 0.131.0">
     
     
     
@@ -50,7 +50,7 @@
   <meta itemprop="description" content="This post explain the use of the linux find command">
   <meta itemprop="datePublished" content="2024-06-21T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-06-21T00:00:00+00:00">
-  <meta itemprop="wordCount" content="491">
+  <meta itemprop="wordCount" content="587">
   <meta itemprop="keywords" content="Linux">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Finding Files - Part One">
@@ -248,7 +248,15 @@
 /usr/bin/chsh
 /usr/bin/mount
 /usr/bin/newgrp
-</code></pre><h3 id="wrap-up">Wrap up</h3>
+</code></pre><h3 id="working-on-the-find">Working on the find</h3>
+<p>We are also given the ability to apply a command to the found item. This is done with the &ldquo;-exec&rdquo; flag. This is extremely handy, so we don&rsquo;t have to do any bashfu to have the found files collected and then piped into the command.</p>
+<pre tabindex="0"><code>user:/tmp/test$ ls
+client.cnf  client.conf  client.config  conf  script.pl  server.conf  vimrc
+user:/tmp/test$ find . -name &#34;*.conf&#34; -exec mv {} ./conf \;
+user:/tmp/test$ ls ./conf
+client.conf  server.conf
+</code></pre><p>Above we search for the &ldquo;.conf&rdquo; files in the directory, and then move them to the &ldquo;conf&rdquo; directory in the current working directory.</p>
+<h3 id="wrap-up">Wrap up</h3>
 <p>As you can see from the few examples that I have show above, find is very flexible and can be a useful tool that is fantastic to keep in your toolbag. In the next post I&rsquo;ll discuss how to use regular expressions can be used in conjunction with find to create patterns even more granular.</p>
 <ul class="pa0">
   
@@ -286,10 +294,6 @@
 	    
 	     <li  class="mb2">
           <a href="/posts/lfcs_journey/">My LFCS Journey</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/finding_files_part_two/">Finding Files - Part Two</a>
         </li>
 	    
     </ul>
