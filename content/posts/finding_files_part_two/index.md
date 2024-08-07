@@ -108,7 +108,7 @@ users:/tmp/test$ find ./ -maxdepth 1 -type f -regextype egrep -regex "\./[^c].*"
 ```
 
 ### Wrap Up ###
-As you can see, by using regular expressions with find, it allows us to search our filesystem at an extremely granular level. If you haven't already learnt regular expressions, I'd highly recommend that you do. You'll come across them in many areas from DevOps, Network, Programming, too many areas to list.
+As you can see, by using regular expressions with find, it allows us to search our filesystem at an extremely granular level. If you haven't already learnt regular expressions, I'd highly recommend that you do. You'll come across them in many areas from DevOps, Networking, Programming, too many areas to list.
 
 
 

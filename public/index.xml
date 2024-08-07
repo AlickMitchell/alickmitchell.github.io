@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cable Kitten</title>
-    <link>http://localhost:1313/</link>
+    <link>https://cablekitten.co.uk/</link>
     <description>Recent content on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cablekitten.co.uk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Finding Files - Part Two</title>
-      <link>http://localhost:1313/posts/finding_files_part_two/</link>
+      <link>https://cablekitten.co.uk/posts/finding_files_part_two/</link>
       <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/finding_files_part_two/</guid>
+      <guid>https://cablekitten.co.uk/posts/finding_files_part_two/</guid>
       <description>In part one I gave an overview of the more fundamental features of find. Here, I&amp;rsquo;ll go over how we can incorporate regular expressions.&#xA;Regular expressions are one of those skills that you&amp;rsquo;ll end up using throughout of your career, from using in a bash script, BGP route manipulation or filtering, or a simple grep.&#xA;One of the features that makes find awesome is its ability to incorporate regular expressions, to create granular search patterns.</description>
     </item>
     <item>
       <title>Finding Files - Part One</title>
-      <link>http://localhost:1313/posts/finding_files_part_one/</link>
+      <link>https://cablekitten.co.uk/posts/finding_files_part_one/</link>
       <pubDate>Fri, 21 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/finding_files_part_one/</guid>
+      <guid>https://cablekitten.co.uk/posts/finding_files_part_one/</guid>
       <description>When using Linux you&amp;rsquo;ll come to use a certain group of tools daily. In your tool bag you&amp;rsquo;ll no doubt have a worn grep, a shiny sed, a beat up awk, and a collection of other well used tools. One of my personal favourites is find.&#xA;Find allows us to pinpoint a specific file by name, or by a certain characteristic. We can link these search options together to work with very granular patterns to match against.</description>
     </item>
     <item>
       <title>Single Area OSPF Deployment on Linux</title>
-      <link>http://localhost:1313/posts/single_area_ospf_on_linux/</link>
+      <link>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/single_area_ospf_on_linux/</guid>
+      <guid>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</guid>
       <description>Though Linux is usually thought of as a server OS. It has huge amount of other implementations from embedded systems, the world of IOT, the mobile phone sector, and we&amp;rsquo;re all still waiting for the year of the Linux Desktop(sure it&amp;rsquo;ll be this year). But a function that is often over looked is the available routing protocol suite that eanbles linux to function as a router.&#xA;The routing protocol suite started off as a project called Zebra, which after becoming discontinued morphed into Quagga Routing Software.</description>
     </item>
     <item>
       <title>GRE Tunneling Between Cisco and Linux</title>
-      <link>http://localhost:1313/posts/gre_tunnel_between_cisco_and_linux/</link>
+      <link>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</link>
       <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/gre_tunnel_between_cisco_and_linux/</guid>
+      <guid>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</guid>
       <description>Generic Routing Encapsulation(GRE) tunnels are a technology that was developed by Cisco but, is now an open standard through RFC 2784. GRE tunnels can provide use with a lot of versatility when needing to move different protocols between networks. Though we have now moved into an era that is predominantly TCP/IP, when GRE was developed it was at a time of multiple network technologies, IPX, Appletalk, Token Ring, etc, flourished. GRE provided the ability to encapsulate these technologies and let them traverse an Internet Protocol network.</description>
     </item>
     <item>
       <title>Link Redundancy with Administrative Distance</title>
-      <link>http://localhost:1313/posts/link_redundancy_with_administrative_distance/</link>
+      <link>https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/link_redundancy_with_administrative_distance/</guid>
+      <guid>https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/</guid>
       <description>In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.&#xA;Administratvie Distance This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&amp;rsquo;ll be using Cisco devices in this example.</description>
     </item>
     <item>
       <title>EEM and a Downed Primary Circuit</title>
-      <link>http://localhost:1313/posts/eem_and_a_downed_primary_circuit/</link>
+      <link>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</link>
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/eem_and_a_downed_primary_circuit/</guid>
+      <guid>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</guid>
       <description>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.&#xA;I&amp;rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active.</description>
     </item>
     <item>
       <title>Linux Static Route</title>
-      <link>http://localhost:1313/posts/linux_static_route/</link>
+      <link>https://cablekitten.co.uk/posts/linux_static_route/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/linux_static_route/</guid>
+      <guid>https://cablekitten.co.uk/posts/linux_static_route/</guid>
       <description>Whilst recently recertifying for my LFCS the networking section had been further expanded and now included static routes. I thought this was fantastic. Though I know a lot of people use linux, I doubt many get down into the plumbing, and work with the networking on their machines. This is just going to be a little walk through of setting up a static route.&#xA;Static routes can come in handy for connecting environments with multiple networks.</description>
     </item>
     <item>
       <title>My LFCS Journey</title>
-      <link>http://localhost:1313/posts/lfcs_journey/</link>
+      <link>https://cablekitten.co.uk/posts/lfcs_journey/</link>
       <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/lfcs_journey/</guid>
+      <guid>https://cablekitten.co.uk/posts/lfcs_journey/</guid>
       <description>I passed my Linux Foundation Certified Systems Administrator Exam a few weeks back. This was a recertification. Since I last took the exam the syllabus has been overhauled. Where previously you would choose between CentOS and Ubuntu, they have now gone for a vendor neutral approach.&#xA;I was hoping for the release of the new LFCE, but I fear that this is never coming. I did message the team a year ago and was told it was in development, but haven&amp;rsquo;t seen any update.</description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/abouts/</link>
+      <link>https://cablekitten.co.uk/abouts/</link>
       <pubDate>Tue, 12 Dec 2023 12:57:32 +0000</pubDate>
-      <guid>http://localhost:1313/abouts/</guid>
+      <guid>https://cablekitten.co.uk/abouts/</guid>
       <description>Hey, I&amp;rsquo;m Alick, a Network Engineer based in the UK.&#xA;I come from a background of Linux system administration and engineering, working in positions in hosting, dealing with Asterisk PBX&amp;rsquo;s, to more industrial settings with large deployments of thin clients.&#xA;A few years back though I moved into a role where I administered a large IT infrastructure of which Linux was the main OS, but the site also had a large on-site network infrastructure, plus was a hub for branch sites.</description>
     </item>
     <item>
       <title>My Cisco ENCOR Journey</title>
-      <link>http://localhost:1313/posts/encor_journey/</link>
+      <link>https://cablekitten.co.uk/posts/encor_journey/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/encor_journey/</guid>
+      <guid>https://cablekitten.co.uk/posts/encor_journey/</guid>
       <description>I passed my Cisco ENCOR exam just over a month ago. I took it on the last day of V1.0. Thought I&amp;rsquo;d give an overview of the resources I used and how I found things. Obviously the Exam has now changed, so other resources maybe required.&#xA;Resources Core Books I would read every morning as soon as I woke. This way I guaranteed that I covered something everyday regardless of what got in the way.</description>
     </item>
   </channel>
