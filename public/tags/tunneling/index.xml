@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tunneling on Cable Kitten</title>
-    <link>http://localhost:1313/tags/tunneling/</link>
+    <link>https://cablekitten.co.uk/tags/tunneling/</link>
     <description>Recent content in Tunneling on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tunneling/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cablekitten.co.uk/tags/tunneling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GRE Tunneling Between Cisco and Linux</title>
-      <link>http://localhost:1313/posts/gre_tunnel_between_cisco_and_linux/</link>
+      <link>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</link>
       <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/gre_tunnel_between_cisco_and_linux/</guid>
+      <guid>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</guid>
       <description>&lt;p&gt;Generic Routing Encapsulation(GRE) tunnels are a technology that was developed by Cisco but, is now an open standard through &lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc2784&#34;&gt;RFC 2784&lt;/a&gt;.&#xA;GRE tunnels can provide use with a lot of versatility when needing to move different protocols between networks. Though we have now moved into an era that is predominantly TCP/IP, when GRE was developed it was at a time of multiple network technologies, IPX, Appletalk, Token Ring, etc, flourished. GRE provided the ability to encapsulate these technologies and let them traverse an Internet Protocol network.&lt;/p&gt;</description>
     </item>
   </channel>
