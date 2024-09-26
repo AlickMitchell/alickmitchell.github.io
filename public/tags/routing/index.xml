@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Routing on Cable Kitten</title>
-    <link>https://cablekitten.co.uk/tags/routing/</link>
+    <link>http://localhost:1313/tags/routing/</link>
     <description>Recent content in Routing on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://cablekitten.co.uk/tags/routing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/routing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Single Area OSPF Deployment on Linux</title>
-      <link>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</link>
+      <link>http://localhost:1313/posts/single_area_ospf_on_linux/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</guid>
-      <description>Though Linux is usually thought of as a server OS. It has huge amount of other implementations from embedded systems, the world of IOT, the mobile phone sector, and we&amp;rsquo;re all still waiting for the year of the Linux Desktop(sure it&amp;rsquo;ll be this year). But a function that is often over looked is the available routing protocol suite that eanbles linux to function as a router.&#xA;The routing protocol suite started off as a project called Zebra, which after becoming discontinued morphed into Quagga Routing Software.</description>
+      <guid>http://localhost:1313/posts/single_area_ospf_on_linux/</guid>
+      <description>&lt;p&gt;Though Linux is usually thought of as a server OS. It has huge amount of other implementations from embedded systems, the world of IOT, the mobile phone sector, and we&amp;rsquo;re all still waiting for the year of the Linux Desktop(sure it&amp;rsquo;ll be this year). But a function that is often over looked is the available routing protocol suite that eanbles linux to function as a router.&lt;/p&gt;&#xA;&lt;p&gt;The routing protocol suite started off as a project called Zebra, which after becoming discontinued morphed into &lt;a href=&#34;https://github.com/Quagga&#34;&gt;Quagga Routing Software&lt;/a&gt;. We&amp;rsquo;ll be using &lt;a href=&#34;https://frrouting.org/&#34;&gt;FRRouting&lt;/a&gt;, which is a project that has been forked from Qugga, and is under active development.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Link Redundancy with Administrative Distance</title>
-      <link>https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/</link>
+      <link>http://localhost:1313/posts/link_redundancy_with_administrative_distance/</link>
       <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/</guid>
-      <description>In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.&#xA;Administratvie Distance This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&amp;rsquo;ll be using Cisco devices in this example.</description>
+      <guid>http://localhost:1313/posts/link_redundancy_with_administrative_distance/</guid>
+      <description>&lt;p&gt;In my previous post I worked through how to use EEM when we had the constraint, of having to keep the Backup circuit interface shutdown when not in use. Without this constraint we can implement redundancy with just Administrative Distance.&lt;/p&gt;&#xA;&lt;h3 id=&#34;administratvie-distance&#34;&gt;Administratvie Distance&lt;/h3&gt;&#xA;&lt;p&gt;This is a metric that is used by vendors to rate the reliability of a route. Vendors do use different metrics. I&amp;rsquo;ll be using Cisco devices in this example. The lower the AD(Administrative Distance) value the more reliable a route is deemed.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

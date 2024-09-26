@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Automation on Cable Kitten</title>
-    <link>https://cablekitten.co.uk/tags/automation/</link>
+    <link>http://localhost:1313/tags/automation/</link>
     <description>Recent content in Automation on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://cablekitten.co.uk/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>EEM and a Downed Primary Circuit</title>
-      <link>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</link>
+      <link>http://localhost:1313/posts/eem_and_a_downed_primary_circuit/</link>
       <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</guid>
-      <description>The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.&#xA;I&amp;rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active.</description>
+      <guid>http://localhost:1313/posts/eem_and_a_downed_primary_circuit/</guid>
+      <description>&lt;p&gt;The Embedded Event Manager is a brilliant tool that can be found in the Cisco IOS. Before the development of IOS-EX, devices were limited to TCL and EEM to implement scripting locally on the device. Though we now get python available to us, TCL and EEM are still very useful.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m just going to roll through a simple example of using EEM. We have a Primary and a Backup Circuit in our environment, but prefer to keep the interface of the Backup circuit shutdown when the Primary is active. So if we lose our Primary Connection, the interface connected to the Backup circuit needs to be brought up. This can be scripted with EEM, we&amp;rsquo;ll also put recovery in there. So when the Primary circuit comes back we shut down our interface to the Backup circuit.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

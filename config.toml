@@ -42,5 +42,5 @@ enableRobotsTXT = false
 
 [[menu.main]]
   name = "About"
-  pageRef = "/abouts"
+  pageRef = "/about"
   weight = 2
