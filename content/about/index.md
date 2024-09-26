@@ -34,4 +34,4 @@ Qualifications:
 Learning Platform Transcripts:
 - [Hack The Box Academy](HTB_Academy_Student_Transcript.pdf)
 - [TryHackme](https://tryhackme.com/p/frim)
-- [Linux Academy](
+- [Linux Academy](/about/lacc/)
