@@ -2,112 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cablekitten.co.uk/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-12-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/posts/finding_files_part_two/</loc>
     <lastmod>2024-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/finding_files_part_two/</loc>
+    <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2024-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/tags/linux/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/</loc>
-    <lastmod>2024-07-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://cablekitten.co.uk/tags/</loc>
-    <lastmod>2024-07-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://cablekitten.co.uk/posts/finding_files_part_one/</loc>
+    <loc>http://localhost:1313/posts/finding_files_part_one/</loc>
     <lastmod>2024-06-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/tags/ospf/</loc>
+    <loc>http://localhost:1313/tags/ospf/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/tags/routing/</loc>
+    <loc>http://localhost:1313/tags/routing/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</loc>
+    <loc>http://localhost:1313/posts/single_area_ospf_on_linux/</loc>
     <lastmod>2024-01-31T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/tags/cisco/</loc>
+    <loc>http://localhost:1313/tags/cisco/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/gre_tunnel_between_cisco_and_linux/</loc>
+    <loc>http://localhost:1313/posts/gre_tunnel_between_cisco_and_linux/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/tags/tunneling/</loc>
+    <loc>http://localhost:1313/tags/tunneling/</loc>
     <lastmod>2024-01-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/link_redundancy_with_administrative_distance/</loc>
+    <loc>http://localhost:1313/posts/link_redundancy_with_administrative_distance/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/tags/automation/</loc>
+    <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2024-01-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/eem_and_a_downed_primary_circuit/</loc>
+    <loc>http://localhost:1313/posts/eem_and_a_downed_primary_circuit/</loc>
     <lastmod>2024-01-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/linux_static_route/</loc>
+    <loc>http://localhost:1313/posts/linux_static_route/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/tags/lfcs/</loc>
+    <loc>http://localhost:1313/tags/lfcs/</loc>
     <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/lfcs_journey/</loc>
+    <loc>http://localhost:1313/posts/lfcs_journey/</loc>
     <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2023-12-12T12:57:32+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/tags/encor/</loc>
+    <loc>http://localhost:1313/tags/encor/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/posts/encor_journey/</loc>
+    <loc>http://localhost:1313/posts/encor_journey/</loc>
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://cablekitten.co.uk/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

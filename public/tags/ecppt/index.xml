@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ECPPT on Cable Kitten</title>
+    <link>http://localhost:1313/tags/ecppt/</link>
+    <description>Recent content in ECPPT on Cable Kitten</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ecppt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My eCPPT Journey</title>
+      <link>http://localhost:1313/posts/ecppt_journey/</link>
+      <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ecppt_journey/</guid>
+      <description>&lt;p&gt;I decided to move my study into security to give myself more exposure to an area that I enjoy learning. I wasn&amp;rsquo;t expecting the rabbithole that it&amp;rsquo;s sent me down. Studying for the eCPPT has opened up a hole new community and it&amp;rsquo;s been a brilliant year of learning, but more than I was expecting.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
