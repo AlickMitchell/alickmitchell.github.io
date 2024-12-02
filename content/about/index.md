@@ -23,6 +23,10 @@ Qualifications:
 
 ![Cisco Certified Specialist - Enterprise Core](encor-75x75.jpg)
 
+- [eCPPT - Certified Professional Penetration Tester](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/124874547)
+
+![eCPPT - Certified Professional Penetration Tester](ecppt.jpg)
+
 - [Linux Foundation Certified System Administrator](https://www.credly.com/users/alick-mitchell/badges)
 
 ![Linux Foundation Certified System Administrator](lfcs-75x75.png)
