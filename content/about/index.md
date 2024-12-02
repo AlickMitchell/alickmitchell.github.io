@@ -25,7 +25,7 @@ Qualifications:
 
 - [eCPPT - Certified Professional Penetration Tester](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/124874547)
 
-![eCPPT - Certified Professional Penetration Tester](ecppt.jpg)
+![eCPPT - Certified Professional Penetration Tester](ecppt-75x75.png)
 
 - [Linux Foundation Certified System Administrator](https://www.credly.com/users/alick-mitchell/badges)
 
