@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OSPF on Cable Kitten</title>
-    <link>http://localhost:1313/tags/ospf/</link>
+    <link>https://cablekitten.co.uk/tags/ospf/</link>
     <description>Recent content in OSPF on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ospf/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cablekitten.co.uk/tags/ospf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Single Area OSPF Deployment on Linux</title>
-      <link>http://localhost:1313/posts/single_area_ospf_on_linux/</link>
+      <link>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/single_area_ospf_on_linux/</guid>
+      <guid>https://cablekitten.co.uk/posts/single_area_ospf_on_linux/</guid>
       <description>&lt;p&gt;Though Linux is usually thought of as a server OS. It has huge amount of other implementations from embedded systems, the world of IOT, the mobile phone sector, and we&amp;rsquo;re all still waiting for the year of the Linux Desktop(sure it&amp;rsquo;ll be this year). But a function that is often over looked is the available routing protocol suite that eanbles linux to function as a router.&lt;/p&gt;&#xA;&lt;p&gt;The routing protocol suite started off as a project called Zebra, which after becoming discontinued morphed into &lt;a href=&#34;https://github.com/Quagga&#34;&gt;Quagga Routing Software&lt;/a&gt;. We&amp;rsquo;ll be using &lt;a href=&#34;https://frrouting.org/&#34;&gt;FRRouting&lt;/a&gt;, which is a project that has been forked from Qugga, and is under active development.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,6 +1,6 @@
 +++
 title = 'My Cisco ENCOR Journey'
-tags = ['ENCOR', 'Cisco']
+tags = ['ENCOR', 'Cisco', 'Certification']
 keywords = ['Cisco', 'ENCOR', 'Certification']
 date  = 2023-11-03
 draft = false
