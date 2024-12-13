@@ -7,7 +7,7 @@
     <title>GRE Tunneling Between Cisco and Linux | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="This post walks through setting up a GRE tunnel between an Oracle Linux machine and a Cisco router">
-    <meta name="generator" content="Hugo 0.139.3">
+    <meta name="generator" content="Hugo 0.139.4">
     
     
     
@@ -174,7 +174,7 @@ GRE tunnels can provide use with a lot of versatility when needing to move diffe
 <p>One consideration that has to be taken into account when using GRE, is that alone, it doesn&rsquo;t have any security. All traffic is sent in the clear. We can add IPsec to provide security to our traffic, but in this example we&rsquo;ll just be implementing a simple GRE tunnel.</p>
 <p>The following example will show the interoperability of GRE between a Cisco router and an Oracle Linux box functioning as a router.</p>
 <h2 id="topology">Topology</h2>
-<p><img alt="Topology" src="/posts/gre_tunnel_between_cisco_and_linux/topology.png"></p>
+<p><img src="/posts/gre_tunnel_between_cisco_and_linux/topology.png" alt="Topology"></p>
 <p>In our topology, we have two ipv6 sites connected via an ipv4 network. Though our topology only has one router between our two sites, this is irrelevant, it could be any number. The only important factor is that A-R1 and B-R1 are able to route to each other. This can be achieved with routing protocols or with static routes. This is what is known as the underlay.</p>
 <h3 id="confirming-the-underlay">Confirming the Underlay</h3>
 <p>First, we have ensure that we have the underlay in place. We&rsquo;ll be using static routes to achieve this.</p>
@@ -192,7 +192,7 @@ Routing entry for 121.23.11.0/30
   Routing Descriptor Blocks:
   * 121.23.11.5, via GigabitEthernet0/1
       Route metric is 0, traffic share count is 1
-</code></pre><p><img alt="Ping from A-R1 to B-R1 - Underlay" src="/posts/gre_tunnel_between_cisco_and_linux/ws1.png"></p>
+</code></pre><p><img src="/posts/gre_tunnel_between_cisco_and_linux/ws1.png" alt="Ping from A-R1 to B-R1 - Underlay"></p>
 <p>Pinging B-R1 from A-R1 shows that we have connectivity between the two routers. We are now able to build our Overlay.</p>
 <h3 id="building-the-overlay">Building the Overlay</h3>
 <p>We refer to the GRE tunnel that we build between A-R1 and B-R1 as the overlay. These packets will be encapsulated within the underlay packets and the network devices in-between the two routers don&rsquo;t touch the encapsulated packets.</p>
@@ -252,7 +252,7 @@ PING 2001:db2:1eff:2222::1001(2001:db2:1eff:2222::1001) 56 data bytes
 64 bytes from 2001:db2:1eff:2222::1001: icmp_seq=3 ttl=62 time=5.03 ms
 64 bytes from 2001:db2:1eff:2222::1001: icmp_seq=4 ttl=62 time=4.32 ms
 </code></pre><p>Using a Wireshark capture between A-R1 and B-R1 we can confirm that the traffic is being encapsulated in the GRE tunnel.</p>
-<p><img alt="Ping from A-R1 to B-R1 - Overlay" src="/posts/gre_tunnel_between_cisco_and_linux/ws2.png">
+<p><img src="/posts/gre_tunnel_between_cisco_and_linux/ws2.png" alt="Ping from A-R1 to B-R1 - Overlay">
 If you view the Wireshark capture, you will see that the GRE is being used.</p>
 <p>Though there are a few moving parts in the configuration of GRE, it&rsquo;s not that difficult to implement, and by building the tunnel between a Linux box and a Cisco device, I just wanted to show the versatility of GRE.</p>
 <ul class="pa0">

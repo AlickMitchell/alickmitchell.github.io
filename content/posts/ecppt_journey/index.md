@@ -1,13 +1,13 @@
 +++
 title = 'My eCPPT Journey'
-tags = ['eCPPT', 'Security']
+tags = ['Certification', 'Security']
 keywords = ['eCPPT', 'Security', 'Certification']
 date  = 2024-12-02
 draft = false
 description = "This post is a review of my experience of the eCPPT Exam"
 +++
 
-Last year I decided to move my study into security to give myself more exposure to this important area. I wasn't expecting the rabbit hole that it's sent me down. Studying for the eCPPT(Certified Professional Penetration Tester) has opened up a hole new community and it's been a brilliant year of learning, but more than I was expecting. I took the v2 exam, which is due to be retired at the end of December. Unlike the new v3 exam which is a 24hr exam, but no report to be created. The v2 was a 1-week lab exam with 1-week report write up phase.
+Last year I decided to move my study more into focusing on security to give myself more exposure to this important area. I wasn't expecting the rabbit hole that it's sent me down. Studying for the eCPPT(Certified Professional Penetration Tester) has opened up a hole new community and it's been a brilliant year of learning, but more than I was expecting. I took the v2 exam, which is due to be retired at the end of December. Unlike the new v3 exam which is a 24hr exam, but doesn't require a report to be created. The v2 exam was a 1-week long lab exam with a 1-week report write up phase.
 
 ## Resources ##
 * [INE - Penetration Testing Professional](https://my.ine.com/CyberSecurity/learning-paths/9a29e89e-1327-4fe8-a201-031780263fa9/penetration-testing-professional-retiring-soon)

@@ -7,7 +7,7 @@
     <title>Link Redundancy with Administrative Distance | Cable Kitten</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="This post discusses Administrative Distance for link redundancy on Cisco routers">
-    <meta name="generator" content="Hugo 0.139.3">
+    <meta name="generator" content="Hugo 0.139.4">
     
     
     
@@ -206,7 +206,7 @@
 <p>This functionality can be used by us to implement redundancy. If we have a Primary circuit and a Backup circuit we can set the Backup with a higher AD and if the Primary ever fails, the Backup will be inserted into the routing table.</p>
 <p>In the following example I&rsquo;ll show how the routing table is influenced by different AD values. We&rsquo;ll have one default static route(Site-A - R1), one static route with a modified AD of 10(Site-A - R2), and one OSPF advertisement(Site-A - R3 - Site-B). We&rsquo;ll drop connections and see how routes are added to the routing table.</p>
 <h3 id="topology">Topology</h3>
-<p><img alt="Topology" src="/posts/link_redundancy_with_administrative_distance/topology.png"></p>
+<p><img src="/posts/link_redundancy_with_administrative_distance/topology.png" alt="Topology"></p>
 <ul>
 <li>Site-A static routes</li>
 </ul>
