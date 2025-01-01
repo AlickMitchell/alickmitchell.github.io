@@ -34,8 +34,3 @@ Qualifications:
 - [Cisco Certified Network Associate - CCNA](https://www.credly.com/users/alick-mitchell/badges)
 
 ![Cisco Certified Network Associate - CCNA ](ccna_sm.jpg)
-
-Learning Platform Transcripts:
-- [Hack The Box Academy](HTB_Academy_Student_Transcript.pdf)
-- [TryHackme](https://tryhackme.com/p/frim)
-- [Linux Academy](/about/lacc/)
