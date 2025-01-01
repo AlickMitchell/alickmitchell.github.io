@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ENCOR on Cable Kitten</title>
-    <link>https://cablekitten.co.uk/tags/encor/</link>
+    <link>http://localhost:1313/tags/encor/</link>
     <description>Recent content in ENCOR on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://cablekitten.co.uk/tags/encor/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/encor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Cisco ENCOR Journey</title>
-      <link>https://cablekitten.co.uk/posts/encor_journey/</link>
+      <link>http://localhost:1313/posts/encor_journey/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://cablekitten.co.uk/posts/encor_journey/</guid>
+      <guid>http://localhost:1313/posts/encor_journey/</guid>
       <description>&lt;p&gt;I passed my Cisco ENCOR exam just over a month ago. I took it on the last day of V1.0.&#xA;Thought I&amp;rsquo;d give an overview of the resources I used and how I found things.&#xA;Obviously the Exam has now changed, so other resources maybe required.&lt;/p&gt;&#xA;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;&#xA;&lt;h3 id=&#34;core-books&#34;&gt;Core Books&lt;/h3&gt;&#xA;&lt;p&gt;I would read every morning as soon as I woke. This way I guaranteed that I covered something everyday regardless of what got in the way.&lt;/p&gt;</description>
     </item>
   </channel>
