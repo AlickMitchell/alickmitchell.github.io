@@ -37,11 +37,6 @@ enableRobotsTXT = false
   recent_posts_number = 4
 
 [[params.ananke_socials]]
-  name = "bluesky"
-  url = "https://bsky.app/profile/alickmitchell.bsky.social"
-  icon = "Bluesky"
-
-[[params.ananke_socials]]
   name = "twitter"
   url = "https://twitter.com/AlickMitchell/"
 

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Certification on Cable Kitten</title>
-    <link>http://localhost:1313/tags/certification/</link>
+    <link>https://cablekitten.co.uk/tags/certification/</link>
     <description>Recent content in Certification on Cable Kitten</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 02 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/certification/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cablekitten.co.uk/tags/certification/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My eCPPT Journey</title>
-      <link>http://localhost:1313/posts/ecppt_journey/</link>
+      <link>https://cablekitten.co.uk/posts/ecppt_journey/</link>
       <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ecppt_journey/</guid>
+      <guid>https://cablekitten.co.uk/posts/ecppt_journey/</guid>
       <description>&lt;p&gt;Last year I decided to move my study more into focusing on security to give myself more exposure to this important area. I wasn&amp;rsquo;t expecting the rabbit hole that it&amp;rsquo;s sent me down. Studying for the eCPPT(Certified Professional Penetration Tester) has opened up a hole new community and it&amp;rsquo;s been a brilliant year of learning, but more than I was expecting. I took the v2 exam, which is due to be retired at the end of December. Unlike the new v3 exam which is a 24hr exam, but doesn&amp;rsquo;t require a report to be created. The v2 exam was a 1-week long lab exam with a 1-week report write up phase.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Cisco ENCOR Journey</title>
-      <link>http://localhost:1313/posts/encor_journey/</link>
+      <link>https://cablekitten.co.uk/posts/encor_journey/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/encor_journey/</guid>
+      <guid>https://cablekitten.co.uk/posts/encor_journey/</guid>
       <description>&lt;p&gt;I passed my Cisco ENCOR exam just over a month ago. I took it on the last day of V1.0.&#xA;Thought I&amp;rsquo;d give an overview of the resources I used and how I found things.&#xA;Obviously the Exam has now changed, so other resources maybe required.&lt;/p&gt;&#xA;&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;&#xA;&lt;h3 id=&#34;core-books&#34;&gt;Core Books&lt;/h3&gt;&#xA;&lt;p&gt;I would read every morning as soon as I woke. This way I guaranteed that I covered something everyday regardless of what got in the way.&lt;/p&gt;</description>
     </item>
   </channel>
