@@ -27,7 +27,7 @@ Qualifications:
 
 ![eCPPT - Certified Professional Penetration Tester](ecppt-75x75.png)
 
-- [Certified Kubernetes Application Developer](https://www.credly.com/badges/b87cb12a-35c1-4104-861f-4f4dba8442fa/public_url)
+- [Certified Kubernetes Application Developer - CKAD](https://www.credly.com/badges/b87cb12a-35c1-4104-861f-4f4dba8442fa/public_url)
 
 ![Certified Kubernetes Application Developer](ckad-75x75.png)
 
