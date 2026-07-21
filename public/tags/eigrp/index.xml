@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EIGRP on Cable Kitten</title>
+    <link>http://localhost:1313/tags/eigrp/</link>
+    <description>Recent content in EIGRP on Cable Kitten</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 31 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/eigrp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Unique Ability of EIGRP</title>
+      <link>http://localhost:1313/posts/unique_ability_of_eigrp/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/unique_ability_of_eigrp/</guid>
+      <description>&lt;p&gt;Though&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

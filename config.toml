@@ -11,7 +11,7 @@ googleAnalytics = ""
 enableRobotsTXT = false
 
 [author]
-  twitter = "https://twitter.com/AlickMitchell/"
+#  twitter = "https://twitter.com/AlickMitchell/"
   email = "alickmitchell@protonmail.com"
   name = "Cable Kitten"
 
@@ -37,8 +37,8 @@ enableRobotsTXT = false
   recent_posts_number = 4
 
 [[params.ananke_socials]]
-  name = "twitter"
-  url = "https://twitter.com/AlickMitchell/"
+#  name = "twitter"
+#  url = "https://twitter.com/AlickMitchell/"
 
 [[menu.main]]
   name = "About"

@@ -27,6 +27,10 @@ Qualifications:
 
 ![eCPPT - Certified Professional Penetration Tester](ecppt-75x75.png)
 
+- [Certified Kubernetes Application Developer](https://www.credly.com/badges/b87cb12a-35c1-4104-861f-4f4dba8442fa/public_url)
+
+![Certified Kubernetes Application Developer](ckad-75x75.png)
+
 - [Linux Foundation Certified System Administrator](https://www.credly.com/users/alick-mitchell/badges)
 
 ![Linux Foundation Certified System Administrator](lfcs-75x75.png)
@@ -34,3 +38,7 @@ Qualifications:
 - [Cisco Certified Network Associate - CCNA](https://www.credly.com/users/alick-mitchell/badges)
 
 ![Cisco Certified Network Associate - CCNA ](ccna_sm.jpg)
+
+- [Kubernetes and Cloud Native Associate - KCNA](https://www.credly.com/badges/4ff3aad5-9c6b-4135-a620-e5ddc9268e5c/public_url)
+
+![Kubernetes and Cloud Native Associate - KCNA](kcna-75x75.png)
