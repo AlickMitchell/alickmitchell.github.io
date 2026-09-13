@@ -31,7 +31,7 @@ Qualifications:
 
 ![Certified Kubernetes Application Developer](ckad-75x75.png)
 
-- [Linux Foundation Certified System Administrator](https://www.credly.com/users/alick-mitchell/badges)
+- [Linux Foundation Certified System Administrator - LFCS](https://www.credly.com/users/alick-mitchell/badges)
 
 ![Linux Foundation Certified System Administrator](lfcs-75x75.png)
 

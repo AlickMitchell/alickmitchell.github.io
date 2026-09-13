@@ -63,7 +63,7 @@ My report was just over 80 pages. I used the [TCM - Pentest Report Template](htt
 
 ### Conclusion ###
 
-I enjoyed going down this rabbit hole, and it pushed me to develop two of my weaker areas(Windows administration, and web technologies). I'd say the course has opened my eyes to how the adversary looks at a network and how they'd attack it. Going forward, this skill will make me aware of the security implications of how I deploy infrastructure and implement processors. 
+I enjoyed going down this rabbit hole, and it pushed me to develop two of my weaker areas(Windows administration, and web technologies). I'd say the course has opened my eyes to how the adversary looks at a network and how they'd attack it. Going forward, this skill will make me aware of the security implications of how I deploy infrastructure and implement processes. 
 
 I wasn't really aware of how broad of a curriculum the exam would be. It touches on a lot of technologies. I'd recommend that you have a strong foundation in Linux administration, Windows administration and networking before attempting the eCPPT. 
 
